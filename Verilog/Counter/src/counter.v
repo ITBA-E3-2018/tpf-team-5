@@ -1,8 +1,8 @@
 // Modulo que se encarga de determinar el estado
 //del cronometro dependiendo del input.
-`timescale 1ms / 100us
 
 module counter(
+  clk,		
   st_signal,
   reset,
   hours,
@@ -18,8 +18,8 @@ module counter(
     output reg[5:0] seconds;
     output reg[9:0] milliseconds;
 
-    wire clk;
-    clock_gen clk_gen(clk);
+    input clk;
+    
     initial begin
       hours=0; //Pongo el contador en su estado inicial
       minutes=0;

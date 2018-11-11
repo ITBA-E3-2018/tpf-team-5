@@ -8,7 +8,9 @@ wire[3:0] hours;
 wire[5:0] minutes;
 wire[5:0] seconds;
 wire[9:0] milliseconds;
-counter inst(start_signal,reset, hours, minutes, seconds, milliseconds);
+wire clk;
+clock_gen clk_gen(clk);
+counter inst(clk, start_signal,reset, hours, minutes, seconds, milliseconds);
 
 initial begin
     start_signal=1;
