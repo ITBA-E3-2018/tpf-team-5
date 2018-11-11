@@ -20,35 +20,232 @@ module ImageDrawer(
     input wire[5:0] seconds;
     input wire[9:0] milliseconds;
     output reg[((SCREEN_WIDTH*SCREEN_HEIGHT)-1):0] image; //Se guarda la imagen de la pantalla.
-    reg[19:0] pos; //Variable auxiliar par ver donde dibujar.
+    reg[19:0] pos_i; //Variable auxiliar par ver donde dibujar.
     reg[7:0] i1;
 
-    task Draw2;
-      input reg[19:0] pos_i;
-      output reg[((SCREEN_WIDTH*SCREEN_HEIGHT)-1):0]matrix;
+    task Draw1;
       reg[7:0] i;
       reg[7:0] j;
-      
-      for (j=0;j<(DIGIT_HEIGHT/10) ; j=j+1) begin
-        for (i = 0; i<(DIGIT_WIDTH) ; i=i+1) begin
-          //Dibuja la arista superior del 2.
-          matrix[pos_i+i+(j*SCREEN_WIDTH)]=ON;
-          //Dibuja la arista central del 2.
-          matrix[pos_i+(0.45*DIGIT_HEIGHT+j)*SCREEN_WIDTH+i]=ON;
-          //Dibuja la arista inferior del 2.
-          matrix[pos_i+(0.9*DIGIT_HEIGHT+j)*SCREEN_WIDTH+i]=ON;
+      begin
+        
+        for (j=0;j<(DIGIT_WIDTH/10) ; j=j+1) begin
+          for (i = 0; i<(DIGIT_HEIGHT) ; i=i+1) begin
+            //Dibuja la arista derecha del 1.
+            image[pos_i+((0.9+i)*SCREEN_WIDTH)+j]=ON;
+          end
         end
       end
+      
+    endtask
+
+    task Draw2;
+      reg[7:0] i;
+      reg[7:0] j;
+      begin
+        for (j=0;j<(DIGIT_HEIGHT/10) ; j=j+1) begin
+          for (i = 0; i<(DIGIT_WIDTH) ; i=i+1) begin
+            //Dibuja la arista superior del 2.
+            image[pos_i+i+(j*SCREEN_WIDTH)]=ON;
+            //Dibuja la arista central del 2.
+            image[pos_i+(0.45*DIGIT_HEIGHT+j)*SCREEN_WIDTH+i]=ON;
+            //Dibuja la arista inferior del 2.
+            image[pos_i+(0.9*DIGIT_HEIGHT+j)*SCREEN_WIDTH+i]=ON;
+          end
+          end
     
-      for (j=0;j<(DIGIT_WIDTH/10) ; j=j+1) begin
-        for (i = 0; i<(DIGIT_HEIGHT/2) ; i=i+1) begin
-          //Dibuja la arista derecha del 2.
-          matrix[pos_i+((0.9+i)*SCREEN_WIDTH)+j]=ON;
-          //Dibuja la arista izquierda del 2.
-          matrix[pos_i+(0.5*DIGIT_HEIGHT+i)*SCREEN_WIDTH+j]=ON;
+        for (j=0;j<(DIGIT_WIDTH/10) ; j=j+1) begin
+          for (i = 0; i<(DIGIT_HEIGHT/2) ; i=i+1) begin
+            //Dibuja la arista derecha del 2.
+            image[pos_i+((0.9+i)*SCREEN_WIDTH)+j]=ON;
+            //Dibuja la arista izquierda del 2.
+            image[pos_i+(0.5*DIGIT_HEIGHT+i)*SCREEN_WIDTH+j]=ON;
+          end
         end
+      end
+      
+
+    endtask
+
+
+    task Draw3;
+      reg[7:0] i;
+      reg[7:0] j;
+      begin
+        for (j=0;j<(DIGIT_HEIGHT/10) ; j=j+1) begin
+          for (i = 0; i<(DIGIT_WIDTH) ; i=i+1) begin
+            //Dibuja la arista superior del 3.
+            image[pos_i+i+(j*SCREEN_WIDTH)]=ON;
+            //Dibuja la arista central del 3.
+            image[pos_i+(0.45*DIGIT_HEIGHT+j)*SCREEN_WIDTH+i]=ON;
+            //Dibuja la arista inferior del 3.
+            image[pos_i+(0.9*DIGIT_HEIGHT+j)*SCREEN_WIDTH+i]=ON;
+          end
+        end
+    
+        for (j=0;j<(DIGIT_WIDTH/10) ; j=j+1) begin
+          for (i = 0; i<(DIGIT_HEIGHT) ; i=i+1) begin
+            //Dibuja la arista derecha del 3.
+            image[pos_i+((0.9+i)*SCREEN_WIDTH)+j]=ON;
+          end
+        end
+      end
+      
+
+    endtask
+
+    task Draw4;
+      reg[7:0] i;
+      reg[7:0] j;
+      begin
+        for (j=0;j<(DIGIT_HEIGHT/10) ; j=j+1) begin
+          for (i = 0; i<(DIGIT_WIDTH) ; i=i+1) begin
+            //Dibuja la arista central del 4.
+            image[pos_i+(0.45*DIGIT_HEIGHT+j)*SCREEN_WIDTH+i]=ON;
+          end
+        end
+    
+        for (j=0;j<(DIGIT_WIDTH/10) ; j=j+1) begin
+          for (i = 0; i<(DIGIT_HEIGHT) ; i=i+1) begin
+            //Dibuja la arista derecha del 4.
+            image[pos_i+((0.9+i)*SCREEN_WIDTH)+j]=ON;
+          end
+        end
+
+        for (j=0;j<(DIGIT_WIDTH/10) ; j=j+1) begin
+          for (i = 0; i<(DIGIT_HEIGHT/2) ; i=i+1) begin
+            //Dibuja la arista izquierda del 4.
+            image[pos_i+(i*SCREEN_WIDTH)+j]=ON;
+          end
+        end
+
       end
 
+    endtask
+
+    task Draw5;
+      reg[7:0] i;
+      reg[7:0] j;
+      begin
+        for (j=0;j<(DIGIT_HEIGHT/10) ; j=j+1) begin
+          for (i = 0; i<(DIGIT_WIDTH) ; i=i+1) begin
+            //Dibuja la arista superior del 5.
+            image[pos_i+i+(j*SCREEN_WIDTH)]=ON;
+            //Dibuja la arista central del 5.
+            image[pos_i+(0.45*DIGIT_HEIGHT+j)*SCREEN_WIDTH+i]=ON;
+            //Dibuja la arista inferior del 5.
+            image[pos_i+(0.9*DIGIT_HEIGHT+j)*SCREEN_WIDTH+i]=ON;
+          end
+        end
+    
+        for (j=0;j<(DIGIT_WIDTH/10) ; j=j+1) begin
+          for (i = 0; i<(DIGIT_HEIGHT/2) ; i=i+1) begin
+            //Dibuja la arista izquierda del 5.
+            image[pos_i+(i*SCREEN_WIDTH)+j]=ON;
+            //Dibuja la arista derecha del 5.
+            image[pos_i+(0.5*DIGIT_HEIGHT+i+0.9)*SCREEN_WIDTH+j]=ON;
+          end
+        end
+      end
+    endtask
+
+    task Draw6;
+      reg[7:0] i;
+      reg[7:0] j;
+      begin
+        for (j=0;j<(DIGIT_HEIGHT/10) ; j=j+1) begin
+          for (i = 0; i<(DIGIT_WIDTH) ; i=i+1) begin
+            //Dibuja la arista superior del 6.
+            image[pos_i+i+(j*SCREEN_WIDTH)]=ON;
+            //Dibuja la arista central del 6.
+            image[pos_i+(0.45*DIGIT_HEIGHT+j)*SCREEN_WIDTH+i]=ON;
+            //Dibuja la arista inferior del 6.
+            image[pos_i+(0.9*DIGIT_HEIGHT+j)*SCREEN_WIDTH+i]=ON;
+          end
+        end
+    
+        for (j=0;j<(DIGIT_WIDTH/10) ; j=j+1) begin
+          for (i = 0; i<(DIGIT_HEIGHT/2) ; i=i+1) begin
+            //Dibuja la arista izquierda del 6.
+            image[pos_i+(i*SCREEN_WIDTH)+j]=ON;
+            image[pos_i+(0.5*DIGIT_HEIGHT+i)*SCREEN_WIDTH+j]=ON;
+            //Dibuja la arista derecha del 6.
+            image[pos_i+(0.5*DIGIT_HEIGHT+i+0.9)*SCREEN_WIDTH+j]=ON;
+            
+          end
+        end
+      end
+    endtask
+
+    task Draw7;
+      reg[7:0] i;
+      reg[7:0] j;
+      begin
+        for (j=0;j<(DIGIT_HEIGHT/10) ; j=j+1) begin
+          for (i = 0; i<(DIGIT_WIDTH) ; i=i+1) begin
+            //Dibuja la arista superior del 7.
+            image[pos_i+i+(j*SCREEN_WIDTH)]=ON;
+          end
+        end
+
+        for (j=0;j<(DIGIT_WIDTH/10) ; j=j+1) begin
+          for (i = 0; i<(DIGIT_HEIGHT) ; i=i+1) begin
+            //Dibuja la arista derecha del 7.
+            image[pos_i+((0.9+i)*SCREEN_WIDTH)+j]=ON;
+          end
+        end
+      end
+      
+    endtask
+
+    task Draw8;
+      reg[7:0] i;
+      reg[7:0] j;
+      begin
+        for (j=0;j<(DIGIT_HEIGHT/10) ; j=j+1) begin
+          for (i = 0; i<(DIGIT_WIDTH) ; i=i+1) begin
+            //Dibuja la arista superior del 8.
+            image[pos_i+i+(j*SCREEN_WIDTH)]=ON;
+            //Dibuja la arista central del 8.
+            image[pos_i+(0.45*DIGIT_HEIGHT+j)*SCREEN_WIDTH+i]=ON;
+            //Dibuja la arista inferior del 8.
+            image[pos_i+(0.9*DIGIT_HEIGHT+j)*SCREEN_WIDTH+i]=ON;
+          end
+        end
+    
+        for (j=0;j<(DIGIT_WIDTH/10) ; j=j+1) begin
+          for (i = 0; i<(DIGIT_HEIGHT) ; i=i+1) begin
+            //Dibuja la arista izquierda del 8.
+            image[pos_i+(i*SCREEN_WIDTH)+j]=ON;
+            //Dibuja la arista derecha del 8.
+            image[pos_i+(i+0.9)*SCREEN_WIDTH+j]=ON;
+          end
+        end
+      end
+    endtask
+
+  task Draw9;
+      reg[7:0] i;
+      reg[7:0] j;
+      begin
+        for (j=0;j<(DIGIT_HEIGHT/10) ; j=j+1) begin
+          for (i = 0; i<(DIGIT_WIDTH) ; i=i+1) begin
+            //Dibuja la arista superior del 9.
+            image[pos_i+i+(j*SCREEN_WIDTH)]=ON;
+            //Dibuja la arista central del 9.
+            image[pos_i+(0.45*DIGIT_HEIGHT+j)*SCREEN_WIDTH+i]=ON;
+          end
+        end
+    
+        for (j=0;j<(DIGIT_WIDTH/10) ; j=j+1) begin
+          for (i = 0; i<(DIGIT_HEIGHT/2) ; i=i+1) begin
+            //Dibuja la arista izquierda del 9.
+            image[pos_i+(i*SCREEN_WIDTH)+j]=ON;
+            //Dibuja la arista derecha del 9.
+            image[pos_i+(i+0.9)*SCREEN_WIDTH+j]=ON;
+            image[pos_i+(0.5*DIGIT_HEIGHT+i+0.9)*SCREEN_WIDTH+j]=ON;
+          end
+        end
+      end
     endtask
 
 
@@ -57,10 +254,11 @@ module ImageDrawer(
       for (i1 = 0; i1< (SCREEN_WIDTH*SCREEN_HEIGHT); i1= i1+1 ) begin
         image[i1] = OFF;
       end
+      Draw2;
     end
 
     //Actualizo el digito correspondiente a las horas
-    Draw2(pos,image);
+    
     //Actualizo los digitos correspondientes a los minutos
 
     //Actuallizo los digitos correspondientes a los segundos
