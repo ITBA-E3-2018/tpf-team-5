@@ -74,12 +74,12 @@ refer to the applicable agreement for further details.
 	)
 	(parameter
 		"IMAGE_WIDTH"
-		"640"
+		"390"
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
 		"IMAGE_HEIGHT"
-		"480"
+		"80"
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter

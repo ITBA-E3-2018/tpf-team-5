@@ -1,5 +1,5 @@
 Analysis & Synthesis report for main
-Mon Nov 12 10:36:28 2018
+Mon Nov 12 18:26:40 2018
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -38,7 +38,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Mon Nov 12 10:36:28 2018           ;
+; Analysis & Synthesis Status        ; Failed - Mon Nov 12 18:26:40 2018           ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; main                                        ;
 ; Top-level Entity Name              ; main                                        ;
@@ -172,7 +172,7 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Mon Nov 12 10:35:21 2018
+    Info: Processing started: Mon Nov 12 18:26:15 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off TpFinal -c main
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -189,6 +189,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file main.bd
 Info (12021): Found 1 design units, including 1 entities, in source file pll.v
     Info (12023): Found entity 1: PLL File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/PLL.v Line: 39
 Info (12127): Elaborating entity "main" for the top level hierarchy
+Warning (275011): Block or symbol "PLL" of instance "inst4" overlaps another block or symbol
+Warning (275009): Pin "inclk0" not connected
 Info (12128): Elaborating entity "VGA_controller" for hierarchy "VGA_controller:inst"
 Warning (10230): Verilog HDL assignment warning at VGA_controller.v(50): truncated value with size 32 to match size of target (16) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/VGA_controller.v Line: 50
 Warning (10230): Verilog HDL assignment warning at VGA_controller.v(56): truncated value with size 32 to match size of target (16) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/VGA_controller.v Line: 56
@@ -258,26 +260,144 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/pll_
     Info (12023): Found entity 1: PLL_altpll File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/db/pll_altpll.v Line: 29
 Info (12128): Elaborating entity "PLL_altpll" for hierarchy "PLL:inst4|altpll:altpll_component|PLL_altpll:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altpll.tdf Line: 897
 Info (12128): Elaborating entity "ImageSource" for hierarchy "ImageSource:inst1"
-Warning (10202): Verilog HDL Declaration warning at ImageSource.v(21): vector has more than 2**16 bits File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageSource.v Line: 21
 Warning (10230): Verilog HDL assignment warning at ImageSource.v(29): truncated value with size 32 to match size of target (1) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageSource.v Line: 29
 Warning (10230): Verilog HDL assignment warning at ImageSource.v(30): truncated value with size 32 to match size of target (1) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageSource.v Line: 30
 Warning (10230): Verilog HDL assignment warning at ImageSource.v(31): truncated value with size 32 to match size of target (1) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageSource.v Line: 31
 Warning (10235): Verilog HDL Always Construct warning at ImageSource.v(34): variable "enable" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageSource.v Line: 34
+Warning (10230): Verilog HDL assignment warning at ImageSource.v(39): truncated value with size 32 to match size of target (1) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageSource.v Line: 39
 Warning (10240): Verilog HDL Always Construct warning at ImageSource.v(33): inferring latch(es) for variable "g", which holds its previous value in one or more paths through the always construct File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageSource.v Line: 33
 Info (10041): Inferred latch for "g" at ImageSource.v(33) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageSource.v Line: 33
 Info (12128): Elaborating entity "ImageDrawer" for hierarchy "ImageDrawer:inst2"
-Warning (10202): Verilog HDL Declaration warning at ImageDrawer.v(23): vector has more than 2**16 bits File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 23
-Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(327): truncated value with size 32 to match size of target (1) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 327
-Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(326): truncated value with size 32 to match size of target (8) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 326
-Error (10106): Verilog HDL Loop error at ImageDrawer.v(326): loop must terminate within 5000 iterations File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 326
-Warning (10855): Verilog HDL warning at ImageDrawer.v(325): initial value for variable image should be constant File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 325
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(333): truncated value with size 32 to match size of target (1) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 333
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(332): truncated value with size 32 to match size of target (10) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 332
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(331): truncated value with size 32 to match size of target (10) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 331
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(45): truncated value with size 32 to match size of target (1) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 45
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(47): truncated value with size 32 to match size of target (1) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 47
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(43): truncated value with size 32 to match size of target (8) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 43
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(42): truncated value with size 32 to match size of target (8) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 42
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(54): truncated value with size 32 to match size of target (1) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 54
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(56): truncated value with size 32 to match size of target (1) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 56
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(52): truncated value with size 32 to match size of target (8) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 52
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(51): truncated value with size 32 to match size of target (8) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 51
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(59): truncated value with size 32 to match size of target (16) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 59
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(340): truncated value with size 32 to match size of target (16) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 340
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(315): truncated value with size 32 to match size of target (1) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 315
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(314): truncated value with size 32 to match size of target (8) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 314
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(313): truncated value with size 32 to match size of target (8) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 313
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(321): truncated value with size 32 to match size of target (1) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 321
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(320): truncated value with size 32 to match size of target (8) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 320
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(319): truncated value with size 32 to match size of target (8) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 319
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(324): truncated value with size 32 to match size of target (16) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 324
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(342): truncated value with size 32 to match size of target (16) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 342
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(345): truncated value with size 32 to match size of target (16) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 345
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(347): truncated value with size 32 to match size of target (16) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 347
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(349): truncated value with size 32 to match size of target (16) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 349
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(352): truncated value with size 32 to match size of target (16) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 352
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(354): truncated value with size 32 to match size of target (16) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 354
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(356): truncated value with size 32 to match size of target (16) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 356
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(359): truncated value with size 32 to match size of target (16) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 359
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(361): truncated value with size 32 to match size of target (16) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 361
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(303): truncated value with size 32 to match size of target (1) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 303
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(302): truncated value with size 32 to match size of target (8) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 302
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(301): truncated value with size 32 to match size of target (8) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 301
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(71): truncated value with size 32 to match size of target (1) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 71
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(69): truncated value with size 32 to match size of target (8) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 69
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(68): truncated value with size 32 to match size of target (8) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 68
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(74): truncated value with size 32 to match size of target (16) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 74
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(86): truncated value with size 32 to match size of target (1) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 86
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(88): truncated value with size 32 to match size of target (1) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 88
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(90): truncated value with size 32 to match size of target (1) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 90
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(84): truncated value with size 32 to match size of target (8) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 84
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(83): truncated value with size 32 to match size of target (8) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 83
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(97): truncated value with size 32 to match size of target (1) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 97
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(99): truncated value with size 32 to match size of target (1) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 99
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(95): truncated value with size 32 to match size of target (8) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 95
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(94): truncated value with size 32 to match size of target (8) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 94
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(102): truncated value with size 32 to match size of target (16) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 102
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(115): truncated value with size 32 to match size of target (1) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 115
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(117): truncated value with size 32 to match size of target (1) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 117
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(119): truncated value with size 32 to match size of target (1) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 119
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(113): truncated value with size 32 to match size of target (8) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 113
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(112): truncated value with size 32 to match size of target (8) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 112
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(126): truncated value with size 32 to match size of target (1) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 126
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(124): truncated value with size 32 to match size of target (8) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 124
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(123): truncated value with size 32 to match size of target (8) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 123
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(129): truncated value with size 32 to match size of target (16) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 129
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(142): truncated value with size 32 to match size of target (1) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 142
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(140): truncated value with size 32 to match size of target (8) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 140
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(139): truncated value with size 32 to match size of target (8) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 139
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(149): truncated value with size 32 to match size of target (1) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 149
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(147): truncated value with size 32 to match size of target (8) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 147
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(146): truncated value with size 32 to match size of target (8) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 146
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(156): truncated value with size 32 to match size of target (1) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 156
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(154): truncated value with size 32 to match size of target (8) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 154
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(153): truncated value with size 32 to match size of target (8) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 153
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(159): truncated value with size 32 to match size of target (16) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 159
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(171): truncated value with size 32 to match size of target (1) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 171
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(173): truncated value with size 32 to match size of target (1) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 173
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(175): truncated value with size 32 to match size of target (1) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 175
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(169): truncated value with size 32 to match size of target (8) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 169
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(168): truncated value with size 32 to match size of target (8) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 168
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(182): truncated value with size 32 to match size of target (1) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 182
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(184): truncated value with size 32 to match size of target (1) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 184
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(180): truncated value with size 32 to match size of target (8) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 180
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(179): truncated value with size 32 to match size of target (8) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 179
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(187): truncated value with size 32 to match size of target (16) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 187
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(198): truncated value with size 32 to match size of target (1) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 198
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(200): truncated value with size 32 to match size of target (1) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 200
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(202): truncated value with size 32 to match size of target (1) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 202
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(196): truncated value with size 32 to match size of target (8) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 196
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(195): truncated value with size 32 to match size of target (8) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 195
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(209): truncated value with size 32 to match size of target (1) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 209
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(210): truncated value with size 32 to match size of target (1) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 210
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(212): truncated value with size 32 to match size of target (1) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 212
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(207): truncated value with size 32 to match size of target (8) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 207
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(206): truncated value with size 32 to match size of target (8) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 206
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(216): truncated value with size 32 to match size of target (16) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 216
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(227): truncated value with size 32 to match size of target (1) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 227
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(225): truncated value with size 32 to match size of target (8) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 225
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(224): truncated value with size 32 to match size of target (8) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 224
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(234): truncated value with size 32 to match size of target (1) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 234
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(232): truncated value with size 32 to match size of target (8) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 232
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(231): truncated value with size 32 to match size of target (8) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 231
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(237): truncated value with size 32 to match size of target (16) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 237
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(249): truncated value with size 32 to match size of target (1) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 249
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(251): truncated value with size 32 to match size of target (1) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 251
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(253): truncated value with size 32 to match size of target (1) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 253
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(247): truncated value with size 32 to match size of target (8) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 247
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(246): truncated value with size 32 to match size of target (8) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 246
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(260): truncated value with size 32 to match size of target (1) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 260
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(262): truncated value with size 32 to match size of target (1) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 262
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(258): truncated value with size 32 to match size of target (8) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 258
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(257): truncated value with size 32 to match size of target (8) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 257
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(265): truncated value with size 32 to match size of target (16) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 265
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(276): truncated value with size 32 to match size of target (1) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 276
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(278): truncated value with size 32 to match size of target (1) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 278
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(274): truncated value with size 32 to match size of target (8) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 274
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(273): truncated value with size 32 to match size of target (8) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 273
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(284): truncated value with size 32 to match size of target (1) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 284
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(286): truncated value with size 32 to match size of target (1) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 286
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(288): truncated value with size 32 to match size of target (1) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 288
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(289): truncated value with size 32 to match size of target (1) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 289
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(283): truncated value with size 32 to match size of target (8) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 283
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(282): truncated value with size 32 to match size of target (8) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 282
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(293): truncated value with size 32 to match size of target (16) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 293
+Warning (10270): Verilog HDL Case Statement warning at ImageDrawer.v(370): incomplete case statement has no default case item File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 370
+Warning (10240): Verilog HDL Always Construct warning at ImageDrawer.v(367): inferring latch(es) for variable "image", which holds its previous value in one or more paths through the always construct File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 367
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(386): truncated value with size 32 to match size of target (4) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 386
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(387): truncated value with size 32 to match size of target (4) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 387
+Warning (10270): Verilog HDL Case Statement warning at ImageDrawer.v(389): incomplete case statement has no default case item File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 389
+Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(398): truncated value with size 32 to match size of target (16) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 398
+Error (10172): Verilog HDL unsupported feature error at ImageDrawer.v(303): real variable data type values are not supported File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 303
+Error (10127): Verilog HDL unsupported feature error at ImageDrawer.v(303): real numbers are not supported File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 303
+Warning (10240): Verilog HDL Always Construct warning at ImageDrawer.v(384): inferring latch(es) for variable "image", which holds its previous value in one or more paths through the always construct File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 384
 Error (12152): Can't elaborate user hierarchy "ImageDrawer:inst2"
 Info (144001): Generated suppressed messages file C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/output_files/main.map.smsg
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 2 errors, 17 warnings
-    Error: Peak virtual memory: 5311 megabytes
-    Error: Processing ended: Mon Nov 12 10:36:28 2018
-    Error: Elapsed time: 00:01:07
-    Error: Total CPU time (on all processors): 00:01:02
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 3 errors, 136 warnings
+    Error: Peak virtual memory: 4807 megabytes
+    Error: Processing ended: Mon Nov 12 18:26:40 2018
+    Error: Elapsed time: 00:00:25
+    Error: Total CPU time (on all processors): 00:00:47
 
 
 +------------------------------------------+

@@ -13,10 +13,10 @@ module ImageSource(
   b
 );
 
-parameter IMAGE_WIDTH = 640;
-parameter IMAGE_HEIGHT = 480;
+parameter IMAGE_WIDTH = 390;
+parameter IMAGE_HEIGHT = 80;
 parameter ON = 1;
-parameter OFF = 0;
+parameter OFF = 0; 
 
 input [((IMAGE_HEIGHT*IMAGE_WIDTH)-1):0] image;
 input enable;
@@ -32,7 +32,12 @@ initial begin
 end
 always @(row or column or image) begin
   if (enable) begin
-  g<= image[(row*IMAGE_WIDTH)+column];
+    if ( ( (row>=200)&&(row<280) )&&((column>=125)&&(column<515) ) ) begin
+      g<= image[((row-200)*IMAGE_WIDTH)+(column-125)];
+    end
+    else
+      g<=OFF;
+
   end
 end
 
