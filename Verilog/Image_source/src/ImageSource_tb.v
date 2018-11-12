@@ -1,7 +1,7 @@
 `timescale 1us / 100ns
 module ImageSource_tb;
 
-    reg [((640*480)-1):0] image;
+    reg [((390*80)-1):0] image;
     reg enable;
     reg [15:0]row;
     reg [15:0]column;
@@ -13,12 +13,12 @@ module ImageSource_tb;
 
     initial begin
       enable=1;
-      for (i = 0;i<(640*480) ;i=i+1 ) begin
+      for (i = 0;i<(390*80) ;i=i+1 ) begin
         image[i] = 0; //Apago todo los pixels de la imagen.
       end
       image[0]=1;
       image[10]=1;
-      image[640*470]=1;
+      image[390*70]=1;
       #1
       row=0;
       column=0;
@@ -29,10 +29,10 @@ module ImageSource_tb;
       row=0;
       column=10;
       #1
-      row=470;
+      row=70;
       column=1;
       #1
-      row=470;
+      row=70;
       column=0;
       #1
       $finish;
