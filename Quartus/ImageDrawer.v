@@ -5,7 +5,12 @@ module ImageDrawer(
   minutes,
   seconds,
   milliseconds,
-  image
+  enable,
+  row,
+  column,
+  r,
+  g,
+  b
 );
     parameter SCREEN_WIDTH=640;
     parameter SCREEN_HEIGHT=480;
@@ -14,15 +19,23 @@ module ImageDrawer(
     parameter OFF=0;
     parameter DIGIT_WIDTH= (SCREEN_WIDTH)/(2*NUMBER_OF_DIGITS);
     parameter DIGIT_HEIGHT= 2*DIGIT_WIDTH;
-    parameter MARGIN_SPACE =( (SCREEN_WIDTH-(DIGIT_WIDTH*9.75))/2 );
-    parameter IMAGE_WIDTH = (9.75*DIGIT_WIDTH); //Ancho realmente utilizado para dibujar.
+    parameter MARGIN_SPACE =( (SCREEN_WIDTH-(DIGIT_WIDTH*39)/4)/2 );
+    parameter IMAGE_WIDTH = ((9*DIGIT_WIDTH)+(DIGIT_WIDTH/4)*3); //Ancho realmente utilizado para dibujar.
     parameter IMAGE_HEIGHT = DIGIT_HEIGHT;
-
+	 //Inputs
     input wire[3:0] hours;
     input wire[5:0] minutes;
     input wire[5:0] seconds;
     input wire[9:0] milliseconds;
-    output reg [((390*80)-1):0] image; //Se guarda la imagen de la pantalla.
+	 input enable;
+	 input [15:0]row;
+	 input [15:0]column;
+	 //Outputs
+	 output reg r;
+	 output reg g;
+	 output reg b;
+	 //Variables utilizadas
+	 reg [((IMAGE_WIDTH*IMAGE_HEIGHT)-1):0] image; //Se guarda la imagen de la pantalla.
     reg[15:0] pos_i; //Variable auxiliar par ver donde dibujar.
     reg[9:0] i1;
     reg[9:0] j1;
@@ -44,7 +57,7 @@ module ImageDrawer(
             //Dibuja la arista superior del 0.
             image[pos_i+i+(j*IMAGE_WIDTH)]=ON;
             //Dibuja la arista inferior del 0.
-            image[pos_i+(0.9*DIGIT_HEIGHT+j)*IMAGE_WIDTH+i]=ON;
+            image[pos_i+((9*DIGIT_HEIGHT)/10+j)*IMAGE_WIDTH+i]=ON;
           end
         end
     
@@ -53,7 +66,7 @@ module ImageDrawer(
             //Dibuja la arista izquierda del 0.
             image[pos_i+(i*IMAGE_WIDTH)+j]=ON;
             //Dibuja la arista derecha del 0.
-            image[pos_i+i*IMAGE_WIDTH+(0.9*DIGIT_WIDTH)+j]=ON;
+            image[pos_i+i*IMAGE_WIDTH+(9*DIGIT_WIDTH)/10+j]=ON;
           end
         end
         pos_i= pos_i+DIGIT_WIDTH;
@@ -68,7 +81,7 @@ module ImageDrawer(
         for (j=0;j<(DIGIT_WIDTH/10) ; j=j+1) begin
           for (i = 0; i<(DIGIT_HEIGHT) ; i=i+1) begin
             //Dibuja la arista derecha del 1.
-            image[pos_i+(i*IMAGE_WIDTH)+(0.9*DIGIT_WIDTH)+j]=ON;
+            image[pos_i+(i*IMAGE_WIDTH)+(9*DIGIT_WIDTH)/10+j]=ON;
           end
         end
         pos_i= pos_i+DIGIT_WIDTH;
@@ -85,9 +98,9 @@ module ImageDrawer(
             //Dibuja la arista superior del 2.
             image[pos_i+i+(j*IMAGE_WIDTH)]=ON;
             //Dibuja la arista central del 2.
-            image[pos_i+(0.45*DIGIT_HEIGHT+j)*IMAGE_WIDTH+i]=ON;
+            image[pos_i+((9*DIGIT_HEIGHT)/20+j)*IMAGE_WIDTH+i]=ON;
             //Dibuja la arista inferior del 2.
-            image[pos_i+(0.9*DIGIT_HEIGHT+j)*IMAGE_WIDTH+i]=ON;
+            image[pos_i+((9*DIGIT_HEIGHT)/10+j)*IMAGE_WIDTH+i]=ON;
           end
           end
     
@@ -360,9 +373,20 @@ module ImageDrawer(
       Draw0;
       pos_i=pos_i +(DIGIT_WIDTH/10); //dejo un espacio
       Draw0;
-
+		r=OFF;
+	   g=OFF;
+	   b=OFF;
     end
+	 always @(row or column) begin
+	  if (enable) begin
+		 if ( ( (row>=200)&&(row<280) )&&((column>=125)&&(column<515) ) ) begin
+			g<= image[((row-200)*IMAGE_WIDTH)+(column-125)];
+		 end
+		 else
+			g<=OFF;
 
+	  end
+	end
     //Actualizo el digito correspondiente a las horas
     always @(hours) begin
       pos_i= 0;
@@ -382,7 +406,7 @@ module ImageDrawer(
     end
     //Actualizo los digitos correspondientes a los minutos
     always @(minutes) begin
-      pos_i= DIGIT_WIDTH*(1.45);
+      pos_i= (DIGIT_WIDTH*29)/20;
       minutes_H = minutes/10;
       minutes_L = minutes%10;
       Clear;
@@ -411,7 +435,7 @@ module ImageDrawer(
         9 : Draw9;
       endcase
     end
-    //Actuallizo los digitos correspondientes a los segundos
+    //Actualizo los digitos correspondientes a los segundos
     always @(seconds) begin
       pos_i= DIGIT_WIDTH*4;
       seconds_H= seconds/10;
@@ -445,7 +469,7 @@ module ImageDrawer(
     end
     //Actualizo los digitos correspondientes a los milisegundos
     always @(milliseconds) begin
-      pos_i= DIGIT_WIDTH*(6.55);
+      pos_i= (DIGIT_WIDTH*131)/20;
       milliseconds_H= milliseconds/100;
       milliseconds_M= (milliseconds%100)/10;
       milliseconds_L= milliseconds%10;
