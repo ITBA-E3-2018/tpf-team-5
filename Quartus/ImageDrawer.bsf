@@ -132,7 +132,7 @@ refer to the applicable agreement for further details.
 		"MARGIN_SPACE"
 		""
 		""
-		(type "PARAMETER_SIGNED_FLOAT")	)
+		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
 		"IMAGE_WIDTH"
 		""
@@ -141,6 +141,66 @@ refer to the applicable agreement for further details.
 	(parameter
 		"IMAGE_HEIGHT"
 		""
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"DRAWING_0"
+		"0"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"DRAWING_1"
+		"1"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"DRAWING_2"
+		"2"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"DRAWING_3"
+		"3"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"DRAWING_4"
+		"4"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"DRAWING_5"
+		"5"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"DRAWING_6"
+		"6"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"DRAWING_7"
+		"7"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"DRAWING_8"
+		"8"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"DRAWING_9"
+		"9"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"DRAWING_DOTS"
+		"10"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"DRAWING_BLANK"
+		"11"
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(drawing
