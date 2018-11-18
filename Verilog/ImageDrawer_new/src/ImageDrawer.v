@@ -60,296 +60,400 @@ module ImageDrawer(
     reg[3:0] milliseconds_L;
 
     task Draw0;
-      
       begin
-          if (counter_row<= (DIGIT_WIDTH/10) ) begin
-            g <= ON;
+          if (counter_row<= (DIGIT_HEIGHT/10) ) begin
+            g <= ON; //Dibuja la arista superior del 0.
           end
-            //Dibuja la arista superior del 0.
-            image[pos_i+i+(j*IMAGE_WIDTH)]=ON;
-            //Dibuja la arista inferior del 0.
-            image[pos_i+((9*DIGIT_HEIGHT)/10+j)*IMAGE_WIDTH+i]=ON;
+
+          else if (counter_row>= ((9*DIGIT_HEIGHT)/10) ) begin
+            g <= ON; //Dibuja la arista inferior del 0.
           end
+
+          else if (counter_col<= (DIGIT_WIDTH/10) ) begin
+            g <= ON; //Dibuja la arista izquierda del 0.
+          end
+
+          else if (counter_col>= ((9*DIGIT_WIDTH)/10) ) begin
+            g <= ON; //Dibuja la arista derecha del 0.
+          end
+
+          else begin
+            g <= OFF;
+          end
+
+          //Actualizo los contadores
+          if (counter_col < (DIGIT_WIDTH-1)) begin
+            counter_col <= counter_col + 1;
+          end
+          else begin
+            counter_col <= 0;
+            counter_row <= counter_row + 1;
+            if (counter_row >= DIGIT_HEIGHT) begin
+              g <= OFF;
+            end
+          end
+          
         end
     
-        for (j=0;j<(DIGIT_WIDTH/10) ; j=j+1) begin
-          for (i = 0; i<(DIGIT_HEIGHT) ; i=i+1) begin
-            //Dibuja la arista izquierda del 0.
-            image[pos_i+(i*IMAGE_WIDTH)+j]=ON;
-            //Dibuja la arista derecha del 0.
-            image[pos_i+i*IMAGE_WIDTH+(9*DIGIT_WIDTH)/10+j]=ON;
-          end
-        end
-        if(counter_col < DIGIT_WIDTH)
-          counter_col = counter_col + 1;
-        else begin
-          counter_col = 0;
-          counter_row = counter_row + 1;
-        end
-      end
     endtask
 
     task Draw1;
       begin
-        for (j=0;j<(DIGIT_WIDTH/10) ; j=j+1) begin
-          for (i = 0; i<(DIGIT_HEIGHT) ; i=i+1) begin
-            //Dibuja la arista derecha del 1.
-            image[pos_i+(i*IMAGE_WIDTH)+(9*DIGIT_WIDTH)/10+j]=ON;
+
+          if (counter_col>= ((9*DIGIT_WIDTH)/10) ) begin
+            g <= ON; //Dibuja la arista derecha del 1.
+          end
+
+          else begin
+            g <= OFF;
+          end
+          
+          //Actualizo los contadores
+          if (counter_col < (DIGIT_WIDTH-1)) begin
+            counter_col <= counter_col + 1;
+          end
+          else begin
+            counter_col <= 0;
+            counter_row <= counter_row + 1;
+            if (counter_row >= DIGIT_HEIGHT) begin
+              g <= OFF;
+            end
           end
         end
-        counter = counter +1;
-      end
       
     endtask
 
     task Draw2;
-      reg[7:0] i;
-      reg[7:0] j;
       begin
-        for (j=0;j<(DIGIT_HEIGHT/10) ; j=j+1) begin
-          for (i = 0; i<(DIGIT_WIDTH) ; i=i+1) begin
-            //Dibuja la arista superior del 2.
-            image[pos_i+i+(j*IMAGE_WIDTH)]=ON;
-            //Dibuja la arista central del 2.
-            image[pos_i+((9*DIGIT_HEIGHT)/20+j)*IMAGE_WIDTH+i]=ON;
-            //Dibuja la arista inferior del 2.
-            image[pos_i+((9*DIGIT_HEIGHT)/10+j)*IMAGE_WIDTH+i]=ON;
+          if (counter_row<= (DIGIT_HEIGHT/10) ) begin
+            g <= ON; //Dibuja la arista superior del 2.
           end
+
+          else if ( ( counter_row>= (DIGIT_HEIGHT/2)-DIGIT_HEIGHT/20 )&&( counter_row< (DIGIT_HEIGHT/2)+DIGIT_HEIGHT/20 ) ) begin
+            g <= ON; //Dibuja la arista central del 2.  
           end
-    
-        for (j=0;j<(DIGIT_WIDTH/10) ; j=j+1) begin
-          for (i = 0; i<(DIGIT_HEIGHT/2) ; i=i+1) begin
-            //Dibuja la arista derecha del 2.
-            image[pos_i+((0.9+i)*IMAGE_WIDTH)+j]=ON;
-            //Dibuja la arista izquierda del 2.
-            image[pos_i+(0.5*DIGIT_HEIGHT+i)*IMAGE_WIDTH+j]=ON;
+
+          else if (counter_row>= ((9*DIGIT_HEIGHT)/10) ) begin
+            g <= ON; //Dibuja la arista inferior del 2.
           end
-        end
-        pos_i= pos_i+DIGIT_WIDTH;
+
+          else if ( (counter_col<= (DIGIT_WIDTH/10) )&&(counter_row>= DIGIT_HEIGHT/2) ) begin
+            g <= ON; //Dibuja la arista izquierda del 2.
+          end
+
+          else if ( (counter_col>= ((9*DIGIT_WIDTH)/10))&&(counter_row<= DIGIT_HEIGHT/2) ) begin
+            g <= ON; //Dibuja la arista derecha del 2.
+          end
+
+          else begin
+            g <= OFF;
+          end
+
+          //Actualizo los contadores
+          if (counter_col < (DIGIT_WIDTH-1)) begin
+            counter_col <= counter_col + 1;
+          end
+          else begin
+            counter_col <= 0;
+            counter_row <= counter_row + 1;
+            if (counter_row >= DIGIT_HEIGHT) begin
+              g <= OFF;
+            end
+          end
+          
       end
-      
 
     endtask
 
     task Draw3;
-      reg[7:0] i;
-      reg[7:0] j;
       begin
-        for (j=0;j<(DIGIT_HEIGHT/10) ; j=j+1) begin
-          for (i = 0; i<(DIGIT_WIDTH) ; i=i+1) begin
-            //Dibuja la arista superior del 3.
-            image[pos_i+i+(j*IMAGE_WIDTH)]=ON;
-            //Dibuja la arista central del 3.
-            image[pos_i+(0.45*DIGIT_HEIGHT+j)*IMAGE_WIDTH+i]=ON;
-            //Dibuja la arista inferior del 3.
-            image[pos_i+(0.9*DIGIT_HEIGHT+j)*IMAGE_WIDTH+i]=ON;
+          if (counter_row<= (DIGIT_HEIGHT/10) ) begin
+            g <= ON; //Dibuja la arista superior del 3.
           end
-        end
-    
-        for (j=0;j<(DIGIT_WIDTH/10) ; j=j+1) begin
-          for (i = 0; i<(DIGIT_HEIGHT) ; i=i+1) begin
-            //Dibuja la arista derecha del 3.
-            image[pos_i+(0.9*DIGIT_WIDTH)+(i*IMAGE_WIDTH)+j]=ON;
+
+          else if ( ( counter_row>= (DIGIT_HEIGHT/2)-DIGIT_HEIGHT/20 )&&( counter_row< (DIGIT_HEIGHT/2)+DIGIT_HEIGHT/20 ) ) begin
+            g <= ON; //Dibuja la arista central del 3.  
           end
-        end
-        pos_i= pos_i+DIGIT_WIDTH;
+
+          else if (counter_row>= ((9*DIGIT_HEIGHT)/10) ) begin
+            g <= ON; //Dibuja la arista inferior del 3.
+          end
+
+          else if (counter_col>= ((9*DIGIT_WIDTH)/10) ) begin
+            g <= ON; //Dibuja la arista derecha del 3.
+          end
+
+          else begin
+            g <= OFF;
+          end
+
+          //Actualizo los contadores
+          if (counter_col < (DIGIT_WIDTH-1)) begin
+            counter_col <= counter_col + 1;
+          end
+          else begin
+            counter_col <= 0;
+            counter_row <= counter_row + 1;
+            if (counter_row >= DIGIT_HEIGHT) begin
+              g <= OFF;
+            end
+          end
+          
       end
       
-
     endtask
 
     task Draw4;
-      reg[7:0] i;
-      reg[7:0] j;
       begin
-        for (j=0;j<(DIGIT_HEIGHT/10) ; j=j+1) begin
-          for (i = 0; i<(DIGIT_WIDTH) ; i=i+1) begin
-            //Dibuja la arista central del 4.
-            image[pos_i+(0.45*DIGIT_HEIGHT+j)*IMAGE_WIDTH+i]=ON;
+          if ( ( counter_row>= (DIGIT_HEIGHT/2)-DIGIT_HEIGHT/20 )&&( counter_row< (DIGIT_HEIGHT/2)+DIGIT_HEIGHT/20 ) ) begin
+            g <= ON; //Dibuja la arista central del 4.  
           end
-        end
-    
-        for (j=0;j<(DIGIT_WIDTH/10) ; j=j+1) begin
-          for (i = 0; i<(DIGIT_HEIGHT) ; i=i+1) begin
-            //Dibuja la arista derecha del 4.
-            image[pos_i+(0.9*DIGIT_WIDTH)+(i*IMAGE_WIDTH)+j]=ON;
-          end
-        end
 
-        for (j=0;j<(DIGIT_WIDTH/10) ; j=j+1) begin
-          for (i = 0; i<(DIGIT_HEIGHT/2) ; i=i+1) begin
-            //Dibuja la arista izquierda del 4.
-            image[pos_i+(i*IMAGE_WIDTH)+j]=ON;
+          else if ( (counter_col<= (DIGIT_WIDTH/10))&&(counter_row<= DIGIT_HEIGHT/2) ) begin
+            g <= ON; //Dibuja la arista izquierda del 4.
           end
-        end
-        pos_i= pos_i+DIGIT_WIDTH;
+
+          else if (counter_col>= ((9*DIGIT_WIDTH)/10) ) begin
+            g <= ON; //Dibuja la arista derecha del 4.
+          end
+
+          else begin
+            g <= OFF;
+          end
+
+          //Actualizo los contadores
+          if (counter_col < (DIGIT_WIDTH-1)) begin
+            counter_col <= counter_col + 1;
+          end
+          else begin
+            counter_col <= 0;
+            counter_row <= counter_row + 1;
+            if (counter_row >= DIGIT_HEIGHT) begin
+              g <= OFF;
+            end
+          end
+          
       end
 
     endtask
 
     task Draw5;
-      reg[7:0] i;
-      reg[7:0] j;
       begin
-        for (j=0;j<(DIGIT_HEIGHT/10) ; j=j+1) begin
-          for (i = 0; i<(DIGIT_WIDTH) ; i=i+1) begin
-            //Dibuja la arista superior del 5.
-            image[pos_i+i+(j*IMAGE_WIDTH)]=ON;
-            //Dibuja la arista central del 5.
-            image[pos_i+(0.45*DIGIT_HEIGHT+j)*IMAGE_WIDTH+i]=ON;
-            //Dibuja la arista inferior del 5.
-            image[pos_i+(0.9*DIGIT_HEIGHT+j)*IMAGE_WIDTH+i]=ON;
+          if (counter_row<= (DIGIT_HEIGHT/10) ) begin
+            g <= ON; //Dibuja la arista superior del 5.
           end
-        end
-    
-        for (j=0;j<(DIGIT_WIDTH/10) ; j=j+1) begin
-          for (i = 0; i<(DIGIT_HEIGHT/2) ; i=i+1) begin
-            //Dibuja la arista izquierda del 5.
-            image[pos_i+(i*IMAGE_WIDTH)+j]=ON;
-            //Dibuja la arista derecha del 5.
-            image[pos_i+(0.9*DIGIT_WIDTH)+(i*IMAGE_WIDTH)+j]=ON;
+
+          else if ( ( counter_row>= (DIGIT_HEIGHT/2)-DIGIT_HEIGHT/20 )&&( counter_row< (DIGIT_HEIGHT/2)+DIGIT_HEIGHT/20 ) ) begin
+            g <= ON; //Dibuja la arista central del 5.  
           end
-        end
-        pos_i= pos_i+DIGIT_WIDTH;
+
+          else if (counter_row>= ((9*DIGIT_HEIGHT)/10) ) begin
+            g <= ON; //Dibuja la arista inferior del 5.
+          end
+
+          else if ( (counter_col<= (DIGIT_WIDTH/10))&&(counter_row<= DIGIT_HEIGHT/2) ) begin
+            g <= ON; //Dibuja la arista izquierda del 5.
+          end
+
+          else if ( (counter_col>= ((9*DIGIT_WIDTH)/10))&&(counter_row>= DIGIT_HEIGHT/2) ) begin
+            g <= ON; //Dibuja la arista derecha del 5.
+          end
+
+          else begin
+            g <= OFF;
+          end
+
+          //Actualizo los contadores
+          if (counter_col < (DIGIT_WIDTH-1)) begin
+            counter_col <= counter_col + 1;
+          end
+          else begin
+            counter_col <= 0;
+            counter_row <= counter_row + 1;
+            if (counter_row >= DIGIT_HEIGHT) begin
+              g <= OFF;
+            end
+          end
+          
       end
     endtask
 
     task Draw6;
-      reg[7:0] i;
-      reg[7:0] j;
       begin
-        for (j=0;j<(DIGIT_HEIGHT/10) ; j=j+1) begin
-          for (i = 0; i<(DIGIT_WIDTH) ; i=i+1) begin
-            //Dibuja la arista superior del 6.
-            image[pos_i+i+(j*IMAGE_WIDTH)]=ON;
-            //Dibuja la arista central del 6.
-            image[pos_i+(0.45*DIGIT_HEIGHT+j)*IMAGE_WIDTH+i]=ON;
-            //Dibuja la arista inferior del 6.
-            image[pos_i+(0.9*DIGIT_HEIGHT+j)*IMAGE_WIDTH+i]=ON;
+          if (counter_row<= (DIGIT_HEIGHT/10) ) begin
+            g <= ON; //Dibuja la arista superior del 6.
           end
-        end
-    
-        for (j=0;j<(DIGIT_WIDTH/10) ; j=j+1) begin
-          for (i = 0; i<(DIGIT_HEIGHT/2) ; i=i+1) begin
-            //Dibuja la arista izquierda del 6.
-            image[pos_i+(i*IMAGE_WIDTH)+j]=ON;
-            image[pos_i+(0.5*DIGIT_HEIGHT+i)*IMAGE_WIDTH+j]=ON;
-            //Dibuja la arista derecha del 6.
-            image[pos_i+(0.9*DIGIT_WIDTH)+(i*IMAGE_WIDTH)+j]=ON;
-            
+
+          else if ( ( counter_row>= (DIGIT_HEIGHT/2)-DIGIT_HEIGHT/20 )&&( counter_row< (DIGIT_HEIGHT/2)+DIGIT_HEIGHT/20 ) ) begin
+            g <= ON; //Dibuja la arista central del 6.  
           end
-        end
-        pos_i= pos_i+DIGIT_WIDTH;
+
+          else if (counter_row>= ((9*DIGIT_HEIGHT)/10) ) begin
+            g <= ON; //Dibuja la arista inferior del 6.
+          end
+
+          else if (counter_col<= (DIGIT_WIDTH/10) ) begin
+            g <= ON; //Dibuja la arista izquierda del 6.
+          end
+
+          else if ( (counter_col>= ((9*DIGIT_WIDTH)/10))&&(counter_row>= DIGIT_HEIGHT/2) ) begin
+            g <= ON; //Dibuja la arista derecha del 6.
+          end
+
+          else begin
+            g <= OFF;
+          end
+
+          //Actualizo los contadores
+          if (counter_col < (DIGIT_WIDTH-1)) begin
+            counter_col <= counter_col + 1;
+          end
+          else begin
+            counter_col <= 0;
+            counter_row <= counter_row + 1;
+            if (counter_row >= DIGIT_HEIGHT) begin
+              g <= OFF;
+            end
+          end
+          
       end
     endtask
 
     task Draw7;
-      reg[7:0] i;
-      reg[7:0] j;
       begin
-        for (j=0;j<(DIGIT_HEIGHT/10) ; j=j+1) begin
-          for (i = 0; i<(DIGIT_WIDTH) ; i=i+1) begin
-            //Dibuja la arista superior del 7.
-            image[pos_i+i+(j*IMAGE_WIDTH)]=ON;
+          if (counter_row<= (DIGIT_HEIGHT/10) ) begin
+            g <= ON; //Dibuja la arista superior del 7.
           end
-        end
 
-        for (j=0;j<(DIGIT_WIDTH/10) ; j=j+1) begin
-          for (i = 0; i<(DIGIT_HEIGHT) ; i=i+1) begin
-            //Dibuja la arista derecha del 7.
-            image[pos_i+(0.9*DIGIT_WIDTH)+(i*IMAGE_WIDTH)+j]=ON;
+          else if (counter_col>= ((9*DIGIT_WIDTH)/10) ) begin
+            g <= ON; //Dibuja la arista derecha del 7.
           end
-        end
-        pos_i= pos_i+DIGIT_WIDTH;
+
+          else begin
+            g <= OFF;
+          end
+
+          //Actualizo los contadores
+          if (counter_col < (DIGIT_WIDTH-1)) begin
+            counter_col <= counter_col + 1;
+          end
+          else begin
+            counter_col <= 0;
+            counter_row <= counter_row + 1;
+            if (counter_row >= DIGIT_HEIGHT) begin
+              g <= OFF;
+            end
+          end
+          
       end
       
     endtask
 
     task Draw8;
-      reg[7:0] i;
-      reg[7:0] j;
       begin
-        for (j=0;j<(DIGIT_HEIGHT/10) ; j=j+1) begin
-          for (i = 0; i<(DIGIT_WIDTH) ; i=i+1) begin
-            //Dibuja la arista superior del 8.
-            image[pos_i+i+(j*IMAGE_WIDTH)]=ON;
-            //Dibuja la arista central del 8.
-            image[pos_i+(0.45*DIGIT_HEIGHT+j)*IMAGE_WIDTH+i]=ON;
-            //Dibuja la arista inferior del 8.
-            image[pos_i+(0.9*DIGIT_HEIGHT+j)*IMAGE_WIDTH+i]=ON;
+          if (counter_row<= (DIGIT_HEIGHT/10) ) begin
+            g <= ON; //Dibuja la arista superior del 8.
           end
-        end
-    
-        for (j=0;j<(DIGIT_WIDTH/10) ; j=j+1) begin
-          for (i = 0; i<(DIGIT_HEIGHT) ; i=i+1) begin
-            //Dibuja la arista izquierda del 8.
-            image[pos_i+(i*IMAGE_WIDTH)+j]=ON;
-            //Dibuja la arista derecha del 8.
-            image[pos_i+(0.9*DIGIT_WIDTH)+(i*IMAGE_WIDTH)+j]=ON;
+
+          else if ( ( counter_row>= (DIGIT_HEIGHT/2)-DIGIT_HEIGHT/20 )&&( counter_row< (DIGIT_HEIGHT/2)+DIGIT_HEIGHT/20 ) ) begin
+            g <= ON; //Dibuja la arista central del 8.  
           end
-        end
-        pos_i= pos_i+DIGIT_WIDTH;
+
+          else if (counter_row>= ((9*DIGIT_HEIGHT)/10) ) begin
+            g <= ON; //Dibuja la arista inferior del 8.
+          end
+
+          else if (counter_col<= (DIGIT_WIDTH/10) ) begin
+            g <= ON; //Dibuja la arista izquierda del 8.
+          end
+
+          else if (counter_col>= ((9*DIGIT_WIDTH)/10) ) begin
+            g <= ON; //Dibuja la arista derecha del 8.
+          end
+
+          else begin
+            g <= OFF;
+          end
+
+          //Actualizo los contadores
+          if (counter_col < (DIGIT_WIDTH-1)) begin
+            counter_col <= counter_col + 1;
+          end
+          else begin
+            counter_col <= 0;
+            counter_row <= counter_row + 1;
+            if (counter_row >= DIGIT_HEIGHT) begin
+              g <= OFF;
+            end
+          end
+          
       end
     endtask
 
     task Draw9;
-        reg[7:0] i;
-        reg[7:0] j;
         begin
-          for (j=0;j<(DIGIT_HEIGHT/10) ; j=j+1) begin
-            for (i = 0; i<(DIGIT_WIDTH) ; i=i+1) begin
-              //Dibuja la arista superior del 9.
-              image[pos_i+i+(j*IMAGE_WIDTH)]=ON;
-              //Dibuja la arista central del 9.
-				  image[pos_i+(0.45*DIGIT_HEIGHT+j)*IMAGE_WIDTH+i]=ON;
-            end
+          if (counter_row<= (DIGIT_HEIGHT/10) ) begin
+            g <= ON; //Dibuja la arista superior del 9.
           end
-      
-          for (j=0;j<(DIGIT_WIDTH/10) ; j=j+1) begin
-            for (i = 0; i<(DIGIT_HEIGHT/2) ; i=i+1) begin
-                image[pos_i+(0.5*DIGIT_HEIGHT+i+0.9)*IMAGE_WIDTH+j]=ON;
-					 //Dibuja la arista izquierda del 9.
-					 image[pos_i+(i*IMAGE_WIDTH)+j]=ON;
-					 //Dibuja la arista derecha del 9.
-					 image[pos_i+(0.9*DIGIT_WIDTH)+(i*IMAGE_WIDTH)+j]=ON;
-					 image[pos_i+(0.9*DIGIT_WIDTH)+((i+0.5*DIGIT_WIDTH)*IMAGE_WIDTH)+j]=ON;
-					 
-            end
-          end
-          pos_i= pos_i+DIGIT_WIDTH;
-        end
-    endtask
 
-    task Clear;
-        reg[7:0] i;
-        reg[7:0] j;
-        begin
-          for (j=0;j<(DIGIT_HEIGHT) ; j=j+1) begin
-            for (i = 0; i<(DIGIT_WIDTH) ; i=i+1) begin
-              image[pos_i+i+(j*IMAGE_WIDTH)]=OFF;
+          else if ( ( counter_row>= (DIGIT_HEIGHT/2)-DIGIT_HEIGHT/20 )&&( counter_row< (DIGIT_HEIGHT/2)+DIGIT_HEIGHT/20 ) ) begin
+            g <= ON; //Dibuja la arista central del 9.  
+          end
+
+          else if ( (counter_col<= (DIGIT_WIDTH/10))&&(counter_row<= DIGIT_HEIGHT/2) ) begin
+            g <= ON; //Dibuja la arista izquierda del 9.
+          end
+
+          else if (counter_col>= ((9*DIGIT_WIDTH)/10) ) begin
+            g <= ON; //Dibuja la arista derecha del 9.
+          end
+
+          else begin
+            g <= OFF;
+          end
+
+          //Actualizo los contadores
+          if (counter_col < (DIGIT_WIDTH-1)) begin
+            counter_col <= counter_col + 1;
+          end
+          else begin
+            counter_col <= 0;
+            counter_row <= counter_row + 1;
+            if (counter_row >= DIGIT_HEIGHT) begin
+              g <= OFF;
             end
           end
-        end
+          
+      end
     endtask
 
     task DrawDots;
-        reg[7:0] i;
-        reg[7:0] j;
         begin
-          for (j=0;j<(DIGIT_HEIGHT/4) ; j=j+1) begin
-            for (i = 0; i<(DIGIT_WIDTH/4) ; i=i+1) begin
-              image[pos_i+i+(j*IMAGE_WIDTH)]=ON; //Dibuja el punto de arriba.
-            end
+          if ( (counter_row< (DIGIT_HEIGHT/4))&&( ( counter_col>=(DIGIT_WIDTH/10))&&( counter_col<((7*DIGIT_WIDTH)/20)) ) ) begin
+            g <= ON; //Dibuja el punto superior.
           end
 
-          for (j=0;j<(DIGIT_HEIGHT/4) ; j=j+1) begin
-            for (i = 0; i<(DIGIT_WIDTH/4) ; i=i+1) begin
-              image[pos_i+i+((0.75+j)*IMAGE_WIDTH)]=ON; //Dibuja el punto de abajo.
+          else if ( (counter_row>= ((3*DIGIT_HEIGHT)/4))&&( ( counter_col>=(DIGIT_WIDTH/10))&&( counter_col<((7*DIGIT_WIDTH)/20)) ) ) begin
+            g <= ON; //Dibuja el punto inferior.
+          end
+
+          else begin
+            g <= OFF;
+          end
+
+          //Actualizo los contadores
+          if (counter_col < (((9*DIGIT_WIDTH)/20)-1)) begin
+            counter_col <= counter_col + 1;
+          end
+          else begin
+            counter_col <= 0;
+            counter_row <= counter_row + 1;
+            if (counter_row >= DIGIT_HEIGHT) begin
+              g <= OFF;
             end
           end
-          pos_i= pos_i+(DIGIT_WIDTH/4);
-
-        end
+          
+      end
     endtask
 
     //La pantalla comienza toda en negro.
@@ -366,78 +470,78 @@ module ImageDrawer(
         case (column)
           125:
           begin
-            counter_row = 0;
-            counter_col = 0;
+            counter_row <= 0;
+            counter_col <= 0;
             state <= hours; //pixel en el que empiezan las horas.
           end
            
           (125+DIGIT_WIDTH):
           begin
-            counter_row = 0;
-            counter_col = 0;
+            counter_row <= 0;
+            counter_col <= 0;
             state <= DRAWING_DOTS; //pixel en el que empiezan los primeros puntos.
           end
 
           (125+DIGIT_WIDTH+(9*DIGIT_WIDTH)/20):
           begin
-            counter_row = 0;
-            counter_col = 0;
+            counter_row <= 0;
+            counter_col <= 0;
             state <= minutes_H; //pixel en el que empieza el primer digito de minutos.
           end
           
-          (125+2*DIGIT_WIDTH+(9*DIGIT_WIDTH)/20) :
+          (125+2*DIGIT_WIDTH+((9*DIGIT_WIDTH)/20)+DIGIT_WIDTH/10) :
           begin
-            counter_row = 0;
-            counter_col = 0;
+            counter_row <= 0;
+            counter_col <= 0;
             state <= minutes_L; //pixel en el que empieza el segundo digito de minutos.
           end
           
-          (125+3*DIGIT_WIDTH+(9*DIGIT_WIDTH)/20):
+          (125+3*DIGIT_WIDTH+((9*DIGIT_WIDTH)/20)+DIGIT_WIDTH/10):
           begin
-            counter_row = 0;
-            counter_col = 0;
+            counter_row <= 0;
+            counter_col <= 0;
             state <= DRAWING_DOTS; //pixel en el que empiezan los segundos puntos.
           end
            
-          (125+3*DIGIT_WIDTH+(2*9*DIGIT_WIDTH)/20):
+          (125+3*DIGIT_WIDTH+((2*9*DIGIT_WIDTH)/20)+DIGIT_WIDTH/10):
           begin
-            counter_row = 0;
-            counter_col = 0;
+            counter_row <= 0;
+            counter_col <= 0;
             state <= seconds_H; //pixel en el que empieza el primer digito de segundos.
           end
            
-          (125+4*DIGIT_WIDTH+(2*9*DIGIT_WIDTH)/20):
+          (125+4*DIGIT_WIDTH+((2*9*DIGIT_WIDTH)/20)+(2*DIGIT_WIDTH)/10):
           begin
-            counter_row = 0;
-            counter_col = 0;
+            counter_row <= 0;
+            counter_col <= 0;
             state <= seconds_L; //pixel en el que empieza el segundo digito de segundos.
           end
            
-          (125+5*DIGIT_WIDTH+(2*9*DIGIT_WIDTH)/20):
+          (125+5*DIGIT_WIDTH+((2*9*DIGIT_WIDTH)/20)+(2*DIGIT_WIDTH)/10):
           begin
-            counter_row = 0;
-            counter_col = 0;
-            state <= DRAWING_DOTS; //pixel en el que empuezan los terceros puntos.
+            counter_row <= 0;
+            counter_col <= 0;
+            state <= DRAWING_DOTS; //pixel en el que empiezan los terceros puntos.
           end
            
-          (125+5*DIGIT_WIDTH+(3*9*DIGIT_WIDTH)/20):
+          (125+5*DIGIT_WIDTH+((3*9*DIGIT_WIDTH)/20)+(2*DIGIT_WIDTH)/10):
           begin
-            counter_row = 0;
-            counter_col = 0;
+            counter_row <= 0;
+            counter_col <= 0;
             state <= milliseconds_H; //pixel en el que empieza el primer digito de milisegundos. 
           end
            
-          (125+6*DIGIT_WIDTH+(3*9*DIGIT_WIDTH)/20):
+          (125+6*DIGIT_WIDTH+((3*9*DIGIT_WIDTH)/20)+(3*DIGIT_WIDTH)/10):
           begin
-            counter_row = 0;
-            counter_col = 0;
+            counter_row <= 0;
+            counter_col <= 0;
             state <= milliseconds_M; //pixel en el que empieza el segundo digito de milisegundos.
           end
            
-          (125+7*DIGIT_WIDTH+(3*9*DIGIT_WIDTH)/20):
+          (125+7*DIGIT_WIDTH+((3*9*DIGIT_WIDTH)/20)+(4*DIGIT_WIDTH)/10):
           begin
-            counter_row = 0;
-            counter_col = 0;
+            counter_row <= 0;
+            counter_col <= 0;
             state <= milliseconds_L; //pixel en el que empieza el tercer digito de milisegundos.
 
           end
@@ -460,8 +564,10 @@ module ImageDrawer(
         DRAWING_9 : Draw9;
         DRAWING_DOTS : DrawDots;
        
-        default: 
+        default: g <= g;
       endcase
+
+      
       
       //switch donde se elige que dibujar dependiendo el estado.
 		 end
