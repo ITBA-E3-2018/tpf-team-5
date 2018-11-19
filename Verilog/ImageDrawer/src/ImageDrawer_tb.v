@@ -15,19 +15,19 @@ module ImageDrawer_tb;
  wire g;
  wire b;
  //Variable para visualizar
- reg [0:39] fila;
+ reg [0:639] fila;
  ImageDrawer inst(hours,minutes,seconds,milliseconds,enable,row,column,r,g,b);
 
 initial begin
   enable =1;
-  hours=3;
-  minutes=0;
-  seconds=0;
-  milliseconds =0;
-  for (row =200; row <281; row =row+1) begin
-    for ( column = 125; column< 165; column = column+1 ) begin
+  hours=6;
+  minutes=54;
+  seconds=31;
+  milliseconds =980;
+  for (row =0; row <480; row =row+1) begin
+    for ( column = 0; column< 640; column = column+1 ) begin
         #1
-        fila[column-125] = g;
+        fila[column] = g;
     end
     $display("%b",fila);
   end

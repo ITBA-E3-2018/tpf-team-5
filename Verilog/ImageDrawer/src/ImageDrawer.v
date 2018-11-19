@@ -69,11 +69,11 @@ module ImageDrawer(
             g <= ON; //Dibuja la arista inferior del 0.
           end
 
-          else if (counter_col<= (DIGIT_WIDTH/10) ) begin
+          else if (counter_col<= (DIGIT_WIDTH/5) ) begin
             g <= ON; //Dibuja la arista izquierda del 0.
           end
 
-          else if (counter_col>= ((9*DIGIT_WIDTH)/10)-1 ) begin
+          else if (counter_col>= ((4*DIGIT_WIDTH)/5)-1 ) begin
             g <= ON; //Dibuja la arista derecha del 0.
           end
 
@@ -96,7 +96,7 @@ module ImageDrawer(
     task Draw1;
       begin
 
-        if (counter_col>= ((9*DIGIT_WIDTH)/10)-1 ) begin
+        if (counter_col>= ((4*DIGIT_WIDTH)/5)-1 ) begin
           g <= ON; //Dibuja la arista derecha del 1.
         end
 
@@ -130,11 +130,11 @@ module ImageDrawer(
             g <= ON; //Dibuja la arista inferior del 2.
           end
 
-          else if ( (counter_col<= (DIGIT_WIDTH/10) )&&(counter_row>= DIGIT_HEIGHT/2) ) begin
+          else if ( (counter_col<= (DIGIT_WIDTH/5) )&&(counter_row>= DIGIT_HEIGHT/2) ) begin
             g <= ON; //Dibuja la arista izquierda del 2.
           end
 
-          else if ( (counter_col>= ((9*DIGIT_WIDTH)/10)-1)&&(counter_row<= DIGIT_HEIGHT/2) ) begin
+          else if ( (counter_col>= ((4*DIGIT_WIDTH)/5)-1)&&(counter_row<= DIGIT_HEIGHT/2) ) begin
             g <= ON; //Dibuja la arista derecha del 2.
           end
 
@@ -168,7 +168,7 @@ module ImageDrawer(
             g <= ON; //Dibuja la arista inferior del 3.
           end
 
-          else if (counter_col>= ((9*DIGIT_WIDTH)/10)-1 ) begin
+          else if (counter_col>= ((4*DIGIT_WIDTH)/5)-1 ) begin
             g <= ON; //Dibuja la arista derecha del 3.
           end
 
@@ -194,11 +194,11 @@ module ImageDrawer(
             g <= ON; //Dibuja la arista central del 4.  
           end
 
-          else if ( (counter_col<= (DIGIT_WIDTH/10))&&(counter_row<= DIGIT_HEIGHT/2) ) begin
+          else if ( (counter_col<= (DIGIT_WIDTH/5))&&(counter_row<= DIGIT_HEIGHT/2) ) begin
             g <= ON; //Dibuja la arista izquierda del 4.
           end
 
-          else if (counter_col>= ((9*DIGIT_WIDTH)/10)-1 ) begin
+          else if (counter_col>= ((4*DIGIT_WIDTH)/5)-1 ) begin
             g <= ON; //Dibuja la arista derecha del 4.
           end
 
@@ -232,11 +232,11 @@ module ImageDrawer(
             g <= ON; //Dibuja la arista inferior del 5.
           end
 
-          else if ( (counter_col<= (DIGIT_WIDTH/10))&&(counter_row<= DIGIT_HEIGHT/2) ) begin
+          else if ( (counter_col<= (DIGIT_WIDTH/5))&&(counter_row<= DIGIT_HEIGHT/2) ) begin
             g <= ON; //Dibuja la arista izquierda del 5.
           end
 
-          else if ( (counter_col>= ((9*DIGIT_WIDTH)/10)-1)&&(counter_row>= DIGIT_HEIGHT/2) ) begin
+          else if ( (counter_col>= ((4*DIGIT_WIDTH)/5)-1)&&(counter_row>= DIGIT_HEIGHT/2) ) begin
             g <= ON; //Dibuja la arista derecha del 5.
           end
 
@@ -269,11 +269,11 @@ module ImageDrawer(
             g <= ON; //Dibuja la arista inferior del 6.
           end
 
-          else if (counter_col<= (DIGIT_WIDTH/10) ) begin
+          else if (counter_col<= (DIGIT_WIDTH/5) ) begin
             g <= ON; //Dibuja la arista izquierda del 6.
           end
 
-          else if ( (counter_col>= ((9*DIGIT_WIDTH)/10)-1)&&(counter_row>= DIGIT_HEIGHT/2) ) begin
+          else if ( (counter_col>= ((4*DIGIT_WIDTH)/5)-1)&&(counter_row>= DIGIT_HEIGHT/2) ) begin
             g <= ON; //Dibuja la arista derecha del 6.
           end
 
@@ -298,7 +298,7 @@ module ImageDrawer(
             g <= ON; //Dibuja la arista superior del 7.
           end
 
-          else if (counter_col>= ((9*DIGIT_WIDTH)/10)-1 ) begin
+          else if (counter_col>= ((4*DIGIT_WIDTH)/5)-1 ) begin
             g <= ON; //Dibuja la arista derecha del 7.
           end
 
@@ -332,11 +332,11 @@ module ImageDrawer(
             g <= ON; //Dibuja la arista inferior del 8.
           end
 
-          else if (counter_col<= (DIGIT_WIDTH/10) ) begin
+          else if (counter_col<= (DIGIT_WIDTH/5) ) begin
             g <= ON; //Dibuja la arista izquierda del 8.
           end
 
-          else if (counter_col>= ((9*DIGIT_WIDTH)/10)-1 ) begin
+          else if (counter_col>= ((4*DIGIT_WIDTH)/5)-1 ) begin
             g <= ON; //Dibuja la arista derecha del 8.
           end
 
@@ -365,11 +365,11 @@ module ImageDrawer(
             g <= ON; //Dibuja la arista central del 9.  
           end
 
-          else if ( (counter_col<= (DIGIT_WIDTH/10))&&(counter_row<= DIGIT_HEIGHT/2) ) begin
+          else if ( (counter_col<= (DIGIT_WIDTH/5))&&(counter_row<= DIGIT_HEIGHT/2) ) begin
             g <= ON; //Dibuja la arista izquierda del 9.
           end
 
-          else if (counter_col>= ((9*DIGIT_WIDTH)/10)-1 ) begin
+          else if (counter_col>= ((4*DIGIT_WIDTH)/5)-1 ) begin
             g <= ON; //Dibuja la arista derecha del 9.
           end
 
