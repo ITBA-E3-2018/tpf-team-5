@@ -1,0 +1,14 @@
+# do TpFinal.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:13:09 on Nov 19,2018
+# vlog -work work main.vo 
+# init_dbinfo() DATABASE ERROR: (sqlite3_open C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/simulation/qsim/work/_lib.qdb): unable to open database file
+# mtilibWrite(): INTERNAL ERROR: Unexpected null object encountered
+# ** Fatal: (vlog-9) Problem while writing token file "C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/simulation/qsim/work/_temp/vlog3k1rih".
+# The system cannot find the path specified. (GetLastError() = 3)
+# ** Error: main.vo(31): Verilog Compiler exiting
+# End time: 23:13:09 on Nov 19,2018, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+# ** Error: c:/intelfpga_lite/18.1/modelsim_ase/win32aloem/vlog failed.
+# Executing ONERROR command at macro ./TpFinal.do line 3

@@ -1,0 +1,197 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'VGA_controller:inst|column[0]'
+Slack : -17.389
+TNS   : -350.351
+
+Type  : Slow 1200mV 85C Model Setup 'ImageDrawer:inst5|counter_col[0]'
+Slack : -12.314
+TNS   : -182.124
+
+Type  : Slow 1200mV 85C Model Setup 'PseudoPll:inst1|clk_out'
+Slack : -2.039
+TNS   : -45.010
+
+Type  : Slow 1200mV 85C Model Setup 'inst2|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.382
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Setup 'inst4|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 29.888
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'VGA_controller:inst|column[0]'
+Slack : -7.466
+TNS   : -14.407
+
+Type  : Slow 1200mV 85C Model Hold 'inst2|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -0.675
+TNS   : -0.675
+
+Type  : Slow 1200mV 85C Model Hold 'PseudoPll:inst1|clk_out'
+Slack : 0.342
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'inst4|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.358
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'ImageDrawer:inst5|counter_col[0]'
+Slack : 1.623
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'VGA_controller:inst|column[0]'
+Slack : -1.535
+TNS   : -219.910
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'PseudoPll:inst1|clk_out'
+Slack : -1.000
+TNS   : -26.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ImageDrawer:inst5|counter_col[0]'
+Slack : 0.195
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'inclk0'
+Slack : 9.835
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'inst4|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 19.609
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'inst2|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 9999.751
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'VGA_controller:inst|column[0]'
+Slack : -15.455
+TNS   : -315.707
+
+Type  : Slow 1200mV 0C Model Setup 'ImageDrawer:inst5|counter_col[0]'
+Slack : -10.913
+TNS   : -162.401
+
+Type  : Slow 1200mV 0C Model Setup 'PseudoPll:inst1|clk_out'
+Slack : -1.732
+TNS   : -37.845
+
+Type  : Slow 1200mV 0C Model Setup 'inst2|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.455
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'inst4|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 30.806
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'VGA_controller:inst|column[0]'
+Slack : -6.635
+TNS   : -12.093
+
+Type  : Slow 1200mV 0C Model Hold 'inst2|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -0.670
+TNS   : -0.670
+
+Type  : Slow 1200mV 0C Model Hold 'PseudoPll:inst1|clk_out'
+Slack : 0.299
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'inst4|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.312
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'ImageDrawer:inst5|counter_col[0]'
+Slack : 1.633
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'VGA_controller:inst|column[0]'
+Slack : -1.263
+TNS   : -190.942
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'PseudoPll:inst1|clk_out'
+Slack : -1.000
+TNS   : -26.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ImageDrawer:inst5|counter_col[0]'
+Slack : 0.256
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'inclk0'
+Slack : 9.817
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'inst4|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 19.607
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'inst2|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 9999.748
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'VGA_controller:inst|column[0]'
+Slack : -9.450
+TNS   : -203.529
+
+Type  : Fast 1200mV 0C Model Setup 'ImageDrawer:inst5|counter_col[0]'
+Slack : -7.076
+TNS   : -104.723
+
+Type  : Fast 1200mV 0C Model Setup 'PseudoPll:inst1|clk_out'
+Slack : -0.706
+TNS   : -13.949
+
+Type  : Fast 1200mV 0C Model Setup 'inst2|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.369
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'inst4|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 34.122
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'VGA_controller:inst|column[0]'
+Slack : -4.491
+TNS   : -9.607
+
+Type  : Fast 1200mV 0C Model Hold 'inst2|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -0.413
+TNS   : -0.413
+
+Type  : Fast 1200mV 0C Model Hold 'PseudoPll:inst1|clk_out'
+Slack : 0.179
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'inst4|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.186
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'ImageDrawer:inst5|counter_col[0]'
+Slack : 0.837
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'PseudoPll:inst1|clk_out'
+Slack : -1.000
+TNS   : -26.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'VGA_controller:inst|column[0]'
+Slack : -0.853
+TNS   : -84.325
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ImageDrawer:inst5|counter_col[0]'
+Slack : 0.138
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'inclk0'
+Slack : 9.587
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'inst4|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 19.646
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'inst2|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 9999.784
+TNS   : 0.000
+
+------------------------------------------------------------

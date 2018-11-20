@@ -3,11 +3,11 @@ h_sync <= VGA_controller:inst.h_sync
 inclk0 => PLL:inst4.inclk0
 inclk0 => PLL2:inst2.inclk0
 v_sync <= VGA_controller:inst.v_sync
-r <= ImageDrawer:inst1.r
+r <= ImageDrawer:inst5.r
 st_signal => counter:inst3.st_signal
 reset => counter:inst3.reset
-g <= ImageDrawer:inst1.g
-b <= ImageDrawer:inst1.b
+g <= ImageDrawer:inst5.g
+b <= ImageDrawer:inst5.b
 
 
 |main|VGA_controller:inst
@@ -190,7 +190,7 @@ inclk[0] => pll1.CLK
 inclk[1] => pll1.CLK1
 
 
-|main|ImageDrawer:inst1
+|main|ImageDrawer:inst5
 hours[0] => Selector4.IN12
 hours[1] => Selector3.IN12
 hours[2] => Selector2.IN12
@@ -622,6 +622,19 @@ milliseconds[6] <= milliseconds[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 milliseconds[7] <= milliseconds[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 milliseconds[8] <= milliseconds[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 milliseconds[9] <= milliseconds[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|PseudoPll:inst1
+clk_in => clk_out~reg0.CLK
+clk_in => counter[0].CLK
+clk_in => counter[1].CLK
+clk_in => counter[2].CLK
+clk_in => counter[3].CLK
+clk_in => counter[4].CLK
+clk_in => counter[5].CLK
+clk_in => counter[6].CLK
+clk_in => counter[7].CLK
+clk_out <= clk_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |main|PLL2:inst2

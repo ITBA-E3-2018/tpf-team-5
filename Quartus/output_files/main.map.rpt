@@ -1,5 +1,5 @@
 Analysis & Synthesis report for main
-Sun Nov 18 13:29:35 2018
+Mon Nov 19 22:56:21 2018
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -20,16 +20,16 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  12. Multiplexer Restructuring Statistics (Restructuring Performed)
  13. Parameter Settings for User Entity Instance: VGA_controller:inst
  14. Parameter Settings for User Entity Instance: PLL:inst4|altpll:altpll_component
- 15. Parameter Settings for User Entity Instance: ImageDrawer:inst1
+ 15. Parameter Settings for User Entity Instance: ImageDrawer:inst5
  16. Parameter Settings for User Entity Instance: PLL2:inst2|altpll:altpll_component
- 17. Parameter Settings for Inferred Entity Instance: ImageDrawer:inst1|lpm_divide:Mod3
- 18. Parameter Settings for Inferred Entity Instance: ImageDrawer:inst1|lpm_divide:Mod2
- 19. Parameter Settings for Inferred Entity Instance: ImageDrawer:inst1|lpm_divide:Div3
- 20. Parameter Settings for Inferred Entity Instance: ImageDrawer:inst1|lpm_divide:Div2
- 21. Parameter Settings for Inferred Entity Instance: ImageDrawer:inst1|lpm_divide:Mod1
- 22. Parameter Settings for Inferred Entity Instance: ImageDrawer:inst1|lpm_divide:Div1
- 23. Parameter Settings for Inferred Entity Instance: ImageDrawer:inst1|lpm_divide:Mod0
- 24. Parameter Settings for Inferred Entity Instance: ImageDrawer:inst1|lpm_divide:Div0
+ 17. Parameter Settings for Inferred Entity Instance: ImageDrawer:inst5|lpm_divide:Mod3
+ 18. Parameter Settings for Inferred Entity Instance: ImageDrawer:inst5|lpm_divide:Mod2
+ 19. Parameter Settings for Inferred Entity Instance: ImageDrawer:inst5|lpm_divide:Div3
+ 20. Parameter Settings for Inferred Entity Instance: ImageDrawer:inst5|lpm_divide:Div2
+ 21. Parameter Settings for Inferred Entity Instance: ImageDrawer:inst5|lpm_divide:Mod1
+ 22. Parameter Settings for Inferred Entity Instance: ImageDrawer:inst5|lpm_divide:Div1
+ 23. Parameter Settings for Inferred Entity Instance: ImageDrawer:inst5|lpm_divide:Mod0
+ 24. Parameter Settings for Inferred Entity Instance: ImageDrawer:inst5|lpm_divide:Div0
  25. altpll Parameter Settings by Entity Instance
  26. Post-Synthesis Netlist Statistics for Top Partition
  27. Elapsed Time Per Partition
@@ -60,15 +60,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Nov 18 13:29:35 2018       ;
+; Analysis & Synthesis Status        ; Successful - Mon Nov 19 22:56:20 2018       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; main                                        ;
 ; Top-level Entity Name              ; main                                        ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 796                                         ;
-;     Total combinational functions  ; 765                                         ;
-;     Dedicated logic registers      ; 92                                          ;
-; Total registers                    ; 92                                          ;
+; Total logic elements               ; 808                                         ;
+;     Total combinational functions  ; 777                                         ;
+;     Dedicated logic registers      ; 101                                         ;
+; Total registers                    ; 101                                         ;
 ; Total pins                         ; 8                                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -185,6 +185,7 @@ refer to the applicable agreement for further details.
 +----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                                 ; Library ;
 +----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------------------+---------+
+; PseudoPll.v                      ; yes             ; User Verilog HDL File              ; C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/PseudoPll.v                ;         ;
 ; VGA_controller.v                 ; yes             ; User Verilog HDL File              ; C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/VGA_controller.v           ;         ;
 ; ImageDrawer.v                    ; yes             ; User Verilog HDL File              ; C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v              ;         ;
 ; counter.v                        ; yes             ; User Verilog HDL File              ; C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/counter.v                  ;         ;
@@ -225,20 +226,20 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+------------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                        ;
 +---------------------------------------------+------------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 796                                                                          ;
+; Estimated Total logic elements              ; 808                                                                          ;
 ;                                             ;                                                                              ;
-; Total combinational functions               ; 765                                                                          ;
+; Total combinational functions               ; 777                                                                          ;
 ; Logic element usage by number of LUT inputs ;                                                                              ;
-;     -- 4 input functions                    ; 237                                                                          ;
-;     -- 3 input functions                    ; 197                                                                          ;
-;     -- <=2 input functions                  ; 331                                                                          ;
+;     -- 4 input functions                    ; 236                                                                          ;
+;     -- 3 input functions                    ; 200                                                                          ;
+;     -- <=2 input functions                  ; 341                                                                          ;
 ;                                             ;                                                                              ;
 ; Logic elements by mode                      ;                                                                              ;
-;     -- normal mode                          ; 557                                                                          ;
-;     -- arithmetic mode                      ; 208                                                                          ;
+;     -- normal mode                          ; 562                                                                          ;
+;     -- arithmetic mode                      ; 215                                                                          ;
 ;                                             ;                                                                              ;
-; Total registers                             ; 92                                                                           ;
-;     -- Dedicated logic registers            ; 92                                                                           ;
+; Total registers                             ; 101                                                                          ;
+;     -- Dedicated logic registers            ; 101                                                                          ;
 ;     -- I/O registers                        ; 0                                                                            ;
 ;                                             ;                                                                              ;
 ; I/O pins                                    ; 8                                                                            ;
@@ -250,8 +251,8 @@ refer to the applicable agreement for further details.
 ;                                             ;                                                                              ;
 ; Maximum fan-out node                        ; PLL:inst4|altpll:altpll_component|PLL_altpll:auto_generated|wire_pll1_clk[0] ;
 ; Maximum fan-out                             ; 67                                                                           ;
-; Total fan-out                               ; 2364                                                                         ;
-; Average fan-out                             ; 2.70                                                                         ;
+; Total fan-out                               ; 2414                                                                         ;
+; Average fan-out                             ; 2.69                                                                         ;
 +---------------------------------------------+------------------------------------------------------------------------------+
 
 
@@ -260,48 +261,49 @@ refer to the applicable agreement for further details.
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                     ; Entity Name         ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |main                                     ; 765 (0)             ; 92 (0)                    ; 0           ; 0            ; 0       ; 0         ; 8    ; 0            ; |main                                                                                                                   ; main                ; work         ;
-;    |ImageDrawer:inst1|                    ; 609 (222)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|ImageDrawer:inst1                                                                                                 ; ImageDrawer         ; work         ;
-;       |lpm_divide:Div0|                   ; 30 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|ImageDrawer:inst1|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
-;          |lpm_divide_hhm:auto_generated|  ; 30 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|ImageDrawer:inst1|lpm_divide:Div0|lpm_divide_hhm:auto_generated                                                   ; lpm_divide_hhm      ; work         ;
-;             |sign_div_unsign_9kh:divider| ; 30 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|ImageDrawer:inst1|lpm_divide:Div0|lpm_divide_hhm:auto_generated|sign_div_unsign_9kh:divider                       ; sign_div_unsign_9kh ; work         ;
-;                |alt_u_div_64f:divider|    ; 30 (30)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|ImageDrawer:inst1|lpm_divide:Div0|lpm_divide_hhm:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_64f:divider ; alt_u_div_64f       ; work         ;
-;       |lpm_divide:Div1|                   ; 30 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|ImageDrawer:inst1|lpm_divide:Div1                                                                                 ; lpm_divide          ; work         ;
-;          |lpm_divide_hhm:auto_generated|  ; 30 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|ImageDrawer:inst1|lpm_divide:Div1|lpm_divide_hhm:auto_generated                                                   ; lpm_divide_hhm      ; work         ;
-;             |sign_div_unsign_9kh:divider| ; 30 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|ImageDrawer:inst1|lpm_divide:Div1|lpm_divide_hhm:auto_generated|sign_div_unsign_9kh:divider                       ; sign_div_unsign_9kh ; work         ;
-;                |alt_u_div_64f:divider|    ; 30 (30)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|ImageDrawer:inst1|lpm_divide:Div1|lpm_divide_hhm:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_64f:divider ; alt_u_div_64f       ; work         ;
-;       |lpm_divide:Div2|                   ; 69 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|ImageDrawer:inst1|lpm_divide:Div2                                                                                 ; lpm_divide          ; work         ;
-;          |lpm_divide_vim:auto_generated|  ; 69 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|ImageDrawer:inst1|lpm_divide:Div2|lpm_divide_vim:auto_generated                                                   ; lpm_divide_vim      ; work         ;
-;             |sign_div_unsign_nlh:divider| ; 69 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|ImageDrawer:inst1|lpm_divide:Div2|lpm_divide_vim:auto_generated|sign_div_unsign_nlh:divider                       ; sign_div_unsign_nlh ; work         ;
-;                |alt_u_div_27f:divider|    ; 69 (69)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|ImageDrawer:inst1|lpm_divide:Div2|lpm_divide_vim:auto_generated|sign_div_unsign_nlh:divider|alt_u_div_27f:divider ; alt_u_div_27f       ; work         ;
-;       |lpm_divide:Div3|                   ; 43 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|ImageDrawer:inst1|lpm_divide:Div3                                                                                 ; lpm_divide          ; work         ;
-;          |lpm_divide_ihm:auto_generated|  ; 43 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|ImageDrawer:inst1|lpm_divide:Div3|lpm_divide_ihm:auto_generated                                                   ; lpm_divide_ihm      ; work         ;
-;             |sign_div_unsign_akh:divider| ; 43 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|ImageDrawer:inst1|lpm_divide:Div3|lpm_divide_ihm:auto_generated|sign_div_unsign_akh:divider                       ; sign_div_unsign_akh ; work         ;
-;                |alt_u_div_84f:divider|    ; 43 (43)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|ImageDrawer:inst1|lpm_divide:Div3|lpm_divide_ihm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_84f:divider ; alt_u_div_84f       ; work         ;
-;       |lpm_divide:Mod0|                   ; 30 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|ImageDrawer:inst1|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
-;          |lpm_divide_k9m:auto_generated|  ; 30 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|ImageDrawer:inst1|lpm_divide:Mod0|lpm_divide_k9m:auto_generated                                                   ; lpm_divide_k9m      ; work         ;
-;             |sign_div_unsign_9kh:divider| ; 30 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|ImageDrawer:inst1|lpm_divide:Mod0|lpm_divide_k9m:auto_generated|sign_div_unsign_9kh:divider                       ; sign_div_unsign_9kh ; work         ;
-;                |alt_u_div_64f:divider|    ; 30 (30)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|ImageDrawer:inst1|lpm_divide:Mod0|lpm_divide_k9m:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_64f:divider ; alt_u_div_64f       ; work         ;
-;       |lpm_divide:Mod1|                   ; 30 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|ImageDrawer:inst1|lpm_divide:Mod1                                                                                 ; lpm_divide          ; work         ;
-;          |lpm_divide_k9m:auto_generated|  ; 30 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|ImageDrawer:inst1|lpm_divide:Mod1|lpm_divide_k9m:auto_generated                                                   ; lpm_divide_k9m      ; work         ;
-;             |sign_div_unsign_9kh:divider| ; 30 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|ImageDrawer:inst1|lpm_divide:Mod1|lpm_divide_k9m:auto_generated|sign_div_unsign_9kh:divider                       ; sign_div_unsign_9kh ; work         ;
-;                |alt_u_div_64f:divider|    ; 30 (30)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|ImageDrawer:inst1|lpm_divide:Mod1|lpm_divide_k9m:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_64f:divider ; alt_u_div_64f       ; work         ;
-;       |lpm_divide:Mod2|                   ; 73 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|ImageDrawer:inst1|lpm_divide:Mod2                                                                                 ; lpm_divide          ; work         ;
-;          |lpm_divide_2bm:auto_generated|  ; 73 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|ImageDrawer:inst1|lpm_divide:Mod2|lpm_divide_2bm:auto_generated                                                   ; lpm_divide_2bm      ; work         ;
-;             |sign_div_unsign_nlh:divider| ; 73 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|ImageDrawer:inst1|lpm_divide:Mod2|lpm_divide_2bm:auto_generated|sign_div_unsign_nlh:divider                       ; sign_div_unsign_nlh ; work         ;
-;                |alt_u_div_27f:divider|    ; 73 (73)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|ImageDrawer:inst1|lpm_divide:Mod2|lpm_divide_2bm:auto_generated|sign_div_unsign_nlh:divider|alt_u_div_27f:divider ; alt_u_div_27f       ; work         ;
-;       |lpm_divide:Mod3|                   ; 82 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|ImageDrawer:inst1|lpm_divide:Mod3                                                                                 ; lpm_divide          ; work         ;
-;          |lpm_divide_vam:auto_generated|  ; 82 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|ImageDrawer:inst1|lpm_divide:Mod3|lpm_divide_vam:auto_generated                                                   ; lpm_divide_vam      ; work         ;
-;             |sign_div_unsign_klh:divider| ; 82 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|ImageDrawer:inst1|lpm_divide:Mod3|lpm_divide_vam:auto_generated|sign_div_unsign_klh:divider                       ; sign_div_unsign_klh ; work         ;
-;                |alt_u_div_s6f:divider|    ; 82 (82)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|ImageDrawer:inst1|lpm_divide:Mod3|lpm_divide_vam:auto_generated|sign_div_unsign_klh:divider|alt_u_div_s6f:divider ; alt_u_div_s6f       ; work         ;
+; |main                                     ; 777 (0)             ; 101 (0)                   ; 0           ; 0            ; 0       ; 0         ; 8    ; 0            ; |main                                                                                                                   ; main                ; work         ;
+;    |ImageDrawer:inst5|                    ; 608 (221)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|ImageDrawer:inst5                                                                                                 ; ImageDrawer         ; work         ;
+;       |lpm_divide:Div0|                   ; 30 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|ImageDrawer:inst5|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_hhm:auto_generated|  ; 30 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|ImageDrawer:inst5|lpm_divide:Div0|lpm_divide_hhm:auto_generated                                                   ; lpm_divide_hhm      ; work         ;
+;             |sign_div_unsign_9kh:divider| ; 30 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|ImageDrawer:inst5|lpm_divide:Div0|lpm_divide_hhm:auto_generated|sign_div_unsign_9kh:divider                       ; sign_div_unsign_9kh ; work         ;
+;                |alt_u_div_64f:divider|    ; 30 (30)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|ImageDrawer:inst5|lpm_divide:Div0|lpm_divide_hhm:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_64f:divider ; alt_u_div_64f       ; work         ;
+;       |lpm_divide:Div1|                   ; 30 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|ImageDrawer:inst5|lpm_divide:Div1                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_hhm:auto_generated|  ; 30 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|ImageDrawer:inst5|lpm_divide:Div1|lpm_divide_hhm:auto_generated                                                   ; lpm_divide_hhm      ; work         ;
+;             |sign_div_unsign_9kh:divider| ; 30 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|ImageDrawer:inst5|lpm_divide:Div1|lpm_divide_hhm:auto_generated|sign_div_unsign_9kh:divider                       ; sign_div_unsign_9kh ; work         ;
+;                |alt_u_div_64f:divider|    ; 30 (30)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|ImageDrawer:inst5|lpm_divide:Div1|lpm_divide_hhm:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_64f:divider ; alt_u_div_64f       ; work         ;
+;       |lpm_divide:Div2|                   ; 69 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|ImageDrawer:inst5|lpm_divide:Div2                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_vim:auto_generated|  ; 69 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|ImageDrawer:inst5|lpm_divide:Div2|lpm_divide_vim:auto_generated                                                   ; lpm_divide_vim      ; work         ;
+;             |sign_div_unsign_nlh:divider| ; 69 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|ImageDrawer:inst5|lpm_divide:Div2|lpm_divide_vim:auto_generated|sign_div_unsign_nlh:divider                       ; sign_div_unsign_nlh ; work         ;
+;                |alt_u_div_27f:divider|    ; 69 (69)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|ImageDrawer:inst5|lpm_divide:Div2|lpm_divide_vim:auto_generated|sign_div_unsign_nlh:divider|alt_u_div_27f:divider ; alt_u_div_27f       ; work         ;
+;       |lpm_divide:Div3|                   ; 43 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|ImageDrawer:inst5|lpm_divide:Div3                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_ihm:auto_generated|  ; 43 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|ImageDrawer:inst5|lpm_divide:Div3|lpm_divide_ihm:auto_generated                                                   ; lpm_divide_ihm      ; work         ;
+;             |sign_div_unsign_akh:divider| ; 43 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|ImageDrawer:inst5|lpm_divide:Div3|lpm_divide_ihm:auto_generated|sign_div_unsign_akh:divider                       ; sign_div_unsign_akh ; work         ;
+;                |alt_u_div_84f:divider|    ; 43 (43)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|ImageDrawer:inst5|lpm_divide:Div3|lpm_divide_ihm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_84f:divider ; alt_u_div_84f       ; work         ;
+;       |lpm_divide:Mod0|                   ; 30 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|ImageDrawer:inst5|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_k9m:auto_generated|  ; 30 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|ImageDrawer:inst5|lpm_divide:Mod0|lpm_divide_k9m:auto_generated                                                   ; lpm_divide_k9m      ; work         ;
+;             |sign_div_unsign_9kh:divider| ; 30 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|ImageDrawer:inst5|lpm_divide:Mod0|lpm_divide_k9m:auto_generated|sign_div_unsign_9kh:divider                       ; sign_div_unsign_9kh ; work         ;
+;                |alt_u_div_64f:divider|    ; 30 (30)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|ImageDrawer:inst5|lpm_divide:Mod0|lpm_divide_k9m:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_64f:divider ; alt_u_div_64f       ; work         ;
+;       |lpm_divide:Mod1|                   ; 30 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|ImageDrawer:inst5|lpm_divide:Mod1                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_k9m:auto_generated|  ; 30 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|ImageDrawer:inst5|lpm_divide:Mod1|lpm_divide_k9m:auto_generated                                                   ; lpm_divide_k9m      ; work         ;
+;             |sign_div_unsign_9kh:divider| ; 30 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|ImageDrawer:inst5|lpm_divide:Mod1|lpm_divide_k9m:auto_generated|sign_div_unsign_9kh:divider                       ; sign_div_unsign_9kh ; work         ;
+;                |alt_u_div_64f:divider|    ; 30 (30)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|ImageDrawer:inst5|lpm_divide:Mod1|lpm_divide_k9m:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_64f:divider ; alt_u_div_64f       ; work         ;
+;       |lpm_divide:Mod2|                   ; 73 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|ImageDrawer:inst5|lpm_divide:Mod2                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_2bm:auto_generated|  ; 73 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|ImageDrawer:inst5|lpm_divide:Mod2|lpm_divide_2bm:auto_generated                                                   ; lpm_divide_2bm      ; work         ;
+;             |sign_div_unsign_nlh:divider| ; 73 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|ImageDrawer:inst5|lpm_divide:Mod2|lpm_divide_2bm:auto_generated|sign_div_unsign_nlh:divider                       ; sign_div_unsign_nlh ; work         ;
+;                |alt_u_div_27f:divider|    ; 73 (73)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|ImageDrawer:inst5|lpm_divide:Mod2|lpm_divide_2bm:auto_generated|sign_div_unsign_nlh:divider|alt_u_div_27f:divider ; alt_u_div_27f       ; work         ;
+;       |lpm_divide:Mod3|                   ; 82 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|ImageDrawer:inst5|lpm_divide:Mod3                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_vam:auto_generated|  ; 82 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|ImageDrawer:inst5|lpm_divide:Mod3|lpm_divide_vam:auto_generated                                                   ; lpm_divide_vam      ; work         ;
+;             |sign_div_unsign_klh:divider| ; 82 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|ImageDrawer:inst5|lpm_divide:Mod3|lpm_divide_vam:auto_generated|sign_div_unsign_klh:divider                       ; sign_div_unsign_klh ; work         ;
+;                |alt_u_div_s6f:divider|    ; 82 (82)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|ImageDrawer:inst5|lpm_divide:Mod3|lpm_divide_vam:auto_generated|sign_div_unsign_klh:divider|alt_u_div_s6f:divider ; alt_u_div_s6f       ; work         ;
 ;    |PLL2:inst2|                           ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|PLL2:inst2                                                                                                        ; PLL2                ; work         ;
 ;       |altpll:altpll_component|           ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|PLL2:inst2|altpll:altpll_component                                                                                ; altpll              ; work         ;
 ;          |PLL2_altpll:auto_generated|     ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|PLL2:inst2|altpll:altpll_component|PLL2_altpll:auto_generated                                                     ; PLL2_altpll         ; work         ;
 ;    |PLL:inst4|                            ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|PLL:inst4                                                                                                         ; PLL                 ; work         ;
 ;       |altpll:altpll_component|           ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|PLL:inst4|altpll:altpll_component                                                                                 ; altpll              ; work         ;
 ;          |PLL_altpll:auto_generated|      ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|PLL:inst4|altpll:altpll_component|PLL_altpll:auto_generated                                                       ; PLL_altpll          ; work         ;
+;    |PseudoPll:inst1|                      ; 11 (11)             ; 9 (9)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|PseudoPll:inst1                                                                                                   ; PseudoPll           ; work         ;
 ;    |VGA_controller:inst|                  ; 91 (91)             ; 66 (66)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|VGA_controller:inst                                                                                               ; VGA_controller      ; work         ;
-;    |counter:inst3|                        ; 65 (65)             ; 26 (26)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|counter:inst3                                                                                                     ; counter             ; work         ;
+;    |counter:inst3|                        ; 67 (67)             ; 26 (26)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|counter:inst3                                                                                                     ; counter             ; work         ;
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -321,43 +323,43 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------------------+----------------------------------+------------------------+
 ; Latch Name                                          ; Latch Enable Signal              ; Free of Timing Hazards ;
 +-----------------------------------------------------+----------------------------------+------------------------+
-; ImageDrawer:inst1|g                                 ; ImageDrawer:inst1|g              ; yes                    ;
-; ImageDrawer:inst1|state[3]                          ; ImageDrawer:inst1|counter_row[3] ; yes                    ;
-; ImageDrawer:inst1|state[2]                          ; ImageDrawer:inst1|counter_row[3] ; yes                    ;
-; ImageDrawer:inst1|counter_col[15]                   ; ImageDrawer:inst1|counter_col[5] ; yes                    ;
-; ImageDrawer:inst1|counter_col[7]                    ; ImageDrawer:inst1|counter_col[5] ; yes                    ;
-; ImageDrawer:inst1|counter_col[6]                    ; ImageDrawer:inst1|counter_col[5] ; yes                    ;
-; ImageDrawer:inst1|counter_col[9]                    ; ImageDrawer:inst1|counter_col[5] ; yes                    ;
-; ImageDrawer:inst1|counter_col[10]                   ; ImageDrawer:inst1|counter_col[5] ; yes                    ;
-; ImageDrawer:inst1|counter_col[11]                   ; ImageDrawer:inst1|counter_col[5] ; yes                    ;
-; ImageDrawer:inst1|counter_col[12]                   ; ImageDrawer:inst1|counter_col[5] ; yes                    ;
-; ImageDrawer:inst1|counter_col[13]                   ; ImageDrawer:inst1|counter_col[5] ; yes                    ;
-; ImageDrawer:inst1|counter_col[14]                   ; ImageDrawer:inst1|counter_col[5] ; yes                    ;
-; ImageDrawer:inst1|counter_col[8]                    ; ImageDrawer:inst1|counter_col[5] ; yes                    ;
-; ImageDrawer:inst1|counter_col[5]                    ; ImageDrawer:inst1|counter_col[5] ; yes                    ;
-; ImageDrawer:inst1|counter_col[4]                    ; ImageDrawer:inst1|counter_col[5] ; yes                    ;
-; ImageDrawer:inst1|counter_col[3]                    ; ImageDrawer:inst1|counter_col[5] ; yes                    ;
-; ImageDrawer:inst1|counter_col[2]                    ; ImageDrawer:inst1|counter_col[5] ; yes                    ;
-; ImageDrawer:inst1|counter_col[1]                    ; ImageDrawer:inst1|counter_col[5] ; yes                    ;
-; ImageDrawer:inst1|counter_col[0]                    ; ImageDrawer:inst1|counter_col[5] ; yes                    ;
-; ImageDrawer:inst1|state[0]                          ; ImageDrawer:inst1|counter_row[3] ; yes                    ;
-; ImageDrawer:inst1|counter_row[6]                    ; ImageDrawer:inst1|counter_row[3] ; yes                    ;
-; ImageDrawer:inst1|counter_row[7]                    ; ImageDrawer:inst1|counter_row[3] ; yes                    ;
-; ImageDrawer:inst1|counter_row[8]                    ; ImageDrawer:inst1|counter_row[3] ; yes                    ;
-; ImageDrawer:inst1|counter_row[9]                    ; ImageDrawer:inst1|counter_row[3] ; yes                    ;
-; ImageDrawer:inst1|counter_row[10]                   ; ImageDrawer:inst1|counter_row[3] ; yes                    ;
-; ImageDrawer:inst1|counter_row[11]                   ; ImageDrawer:inst1|counter_row[3] ; yes                    ;
-; ImageDrawer:inst1|counter_row[12]                   ; ImageDrawer:inst1|counter_row[3] ; yes                    ;
-; ImageDrawer:inst1|counter_row[13]                   ; ImageDrawer:inst1|counter_row[3] ; yes                    ;
-; ImageDrawer:inst1|counter_row[14]                   ; ImageDrawer:inst1|counter_row[3] ; yes                    ;
-; ImageDrawer:inst1|counter_row[15]                   ; ImageDrawer:inst1|counter_row[3] ; yes                    ;
-; ImageDrawer:inst1|counter_row[5]                    ; ImageDrawer:inst1|counter_row[3] ; yes                    ;
-; ImageDrawer:inst1|counter_row[3]                    ; ImageDrawer:inst1|counter_row[3] ; yes                    ;
-; ImageDrawer:inst1|counter_row[4]                    ; ImageDrawer:inst1|counter_row[3] ; yes                    ;
-; ImageDrawer:inst1|counter_row[0]                    ; ImageDrawer:inst1|counter_row[3] ; yes                    ;
-; ImageDrawer:inst1|counter_row[1]                    ; ImageDrawer:inst1|counter_row[3] ; yes                    ;
-; ImageDrawer:inst1|counter_row[2]                    ; ImageDrawer:inst1|counter_row[3] ; yes                    ;
-; ImageDrawer:inst1|state[1]                          ; ImageDrawer:inst1|counter_row[3] ; yes                    ;
+; ImageDrawer:inst5|g                                 ; ImageDrawer:inst5|g              ; yes                    ;
+; ImageDrawer:inst5|state[3]                          ; ImageDrawer:inst5|counter_row[3] ; yes                    ;
+; ImageDrawer:inst5|state[2]                          ; ImageDrawer:inst5|counter_row[3] ; yes                    ;
+; ImageDrawer:inst5|counter_col[15]                   ; ImageDrawer:inst5|counter_col[5] ; yes                    ;
+; ImageDrawer:inst5|counter_col[7]                    ; ImageDrawer:inst5|counter_col[5] ; yes                    ;
+; ImageDrawer:inst5|counter_col[6]                    ; ImageDrawer:inst5|counter_col[5] ; yes                    ;
+; ImageDrawer:inst5|counter_col[9]                    ; ImageDrawer:inst5|counter_col[5] ; yes                    ;
+; ImageDrawer:inst5|counter_col[10]                   ; ImageDrawer:inst5|counter_col[5] ; yes                    ;
+; ImageDrawer:inst5|counter_col[11]                   ; ImageDrawer:inst5|counter_col[5] ; yes                    ;
+; ImageDrawer:inst5|counter_col[12]                   ; ImageDrawer:inst5|counter_col[5] ; yes                    ;
+; ImageDrawer:inst5|counter_col[13]                   ; ImageDrawer:inst5|counter_col[5] ; yes                    ;
+; ImageDrawer:inst5|counter_col[14]                   ; ImageDrawer:inst5|counter_col[5] ; yes                    ;
+; ImageDrawer:inst5|counter_col[8]                    ; ImageDrawer:inst5|counter_col[5] ; yes                    ;
+; ImageDrawer:inst5|counter_col[5]                    ; ImageDrawer:inst5|counter_col[5] ; yes                    ;
+; ImageDrawer:inst5|counter_col[4]                    ; ImageDrawer:inst5|counter_col[5] ; yes                    ;
+; ImageDrawer:inst5|counter_col[3]                    ; ImageDrawer:inst5|counter_col[5] ; yes                    ;
+; ImageDrawer:inst5|counter_col[2]                    ; ImageDrawer:inst5|counter_col[5] ; yes                    ;
+; ImageDrawer:inst5|counter_col[1]                    ; ImageDrawer:inst5|counter_col[5] ; yes                    ;
+; ImageDrawer:inst5|counter_col[0]                    ; ImageDrawer:inst5|counter_col[5] ; yes                    ;
+; ImageDrawer:inst5|state[0]                          ; ImageDrawer:inst5|counter_row[3] ; yes                    ;
+; ImageDrawer:inst5|counter_row[6]                    ; ImageDrawer:inst5|counter_row[3] ; yes                    ;
+; ImageDrawer:inst5|counter_row[7]                    ; ImageDrawer:inst5|counter_row[3] ; yes                    ;
+; ImageDrawer:inst5|counter_row[8]                    ; ImageDrawer:inst5|counter_row[3] ; yes                    ;
+; ImageDrawer:inst5|counter_row[9]                    ; ImageDrawer:inst5|counter_row[3] ; yes                    ;
+; ImageDrawer:inst5|counter_row[10]                   ; ImageDrawer:inst5|counter_row[3] ; yes                    ;
+; ImageDrawer:inst5|counter_row[11]                   ; ImageDrawer:inst5|counter_row[3] ; yes                    ;
+; ImageDrawer:inst5|counter_row[12]                   ; ImageDrawer:inst5|counter_row[3] ; yes                    ;
+; ImageDrawer:inst5|counter_row[13]                   ; ImageDrawer:inst5|counter_row[3] ; yes                    ;
+; ImageDrawer:inst5|counter_row[14]                   ; ImageDrawer:inst5|counter_row[3] ; yes                    ;
+; ImageDrawer:inst5|counter_row[15]                   ; ImageDrawer:inst5|counter_row[3] ; yes                    ;
+; ImageDrawer:inst5|counter_row[5]                    ; ImageDrawer:inst5|counter_row[3] ; yes                    ;
+; ImageDrawer:inst5|counter_row[3]                    ; ImageDrawer:inst5|counter_row[3] ; yes                    ;
+; ImageDrawer:inst5|counter_row[4]                    ; ImageDrawer:inst5|counter_row[3] ; yes                    ;
+; ImageDrawer:inst5|counter_row[0]                    ; ImageDrawer:inst5|counter_row[3] ; yes                    ;
+; ImageDrawer:inst5|counter_row[1]                    ; ImageDrawer:inst5|counter_row[3] ; yes                    ;
+; ImageDrawer:inst5|counter_row[2]                    ; ImageDrawer:inst5|counter_row[3] ; yes                    ;
+; ImageDrawer:inst5|state[1]                          ; ImageDrawer:inst5|counter_row[3] ; yes                    ;
 ; Number of user-specified and inferred latches = 37  ;                                  ;                        ;
 +-----------------------------------------------------+----------------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
@@ -378,8 +380,8 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 92    ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Total registers                              ; 101   ;
+; Number of registers using Synchronous Clear  ; 8     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
@@ -393,12 +395,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output          ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
-; 3:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; Yes        ; |main|counter:inst3|milliseconds[8] ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; Yes        ; |main|counter:inst3|milliseconds[0] ;
 ; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |main|counter:inst3|seconds[0]      ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |main|counter:inst3|minutes[0]      ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |main|counter:inst3|minutes[3]      ;
 ; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |main|VGA_controller:inst|v_count   ;
-; 9:1                ; 16 bits   ; 96 LEs        ; 16 LEs               ; 80 LEs                 ; No         ; |main|ImageDrawer:inst1|Mux7        ;
-; 9:1                ; 4 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |main|ImageDrawer:inst1|Selector2   ;
+; 9:1                ; 16 bits   ; 96 LEs        ; 16 LEs               ; 80 LEs                 ; No         ; |main|ImageDrawer:inst5|Mux3        ;
+; 9:1                ; 4 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |main|ImageDrawer:inst5|Selector4   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
 
 
@@ -798,7 +800,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +----------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ImageDrawer:inst1 ;
+; Parameter Settings for User Entity Instance: ImageDrawer:inst5 ;
 +------------------+-------+-------------------------------------+
 ; Parameter Name   ; Value ; Type                                ;
 +------------------+-------+-------------------------------------+
@@ -1203,7 +1205,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: ImageDrawer:inst1|lpm_divide:Mod3 ;
+; Parameter Settings for Inferred Entity Instance: ImageDrawer:inst5|lpm_divide:Mod3 ;
 +------------------------+----------------+------------------------------------------+
 ; Parameter Name         ; Value          ; Type                                     ;
 +------------------------+----------------+------------------------------------------+
@@ -1226,7 +1228,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: ImageDrawer:inst1|lpm_divide:Mod2 ;
+; Parameter Settings for Inferred Entity Instance: ImageDrawer:inst5|lpm_divide:Mod2 ;
 +------------------------+----------------+------------------------------------------+
 ; Parameter Name         ; Value          ; Type                                     ;
 +------------------------+----------------+------------------------------------------+
@@ -1249,7 +1251,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: ImageDrawer:inst1|lpm_divide:Div3 ;
+; Parameter Settings for Inferred Entity Instance: ImageDrawer:inst5|lpm_divide:Div3 ;
 +------------------------+----------------+------------------------------------------+
 ; Parameter Name         ; Value          ; Type                                     ;
 +------------------------+----------------+------------------------------------------+
@@ -1272,7 +1274,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: ImageDrawer:inst1|lpm_divide:Div2 ;
+; Parameter Settings for Inferred Entity Instance: ImageDrawer:inst5|lpm_divide:Div2 ;
 +------------------------+----------------+------------------------------------------+
 ; Parameter Name         ; Value          ; Type                                     ;
 +------------------------+----------------+------------------------------------------+
@@ -1295,7 +1297,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: ImageDrawer:inst1|lpm_divide:Mod1 ;
+; Parameter Settings for Inferred Entity Instance: ImageDrawer:inst5|lpm_divide:Mod1 ;
 +------------------------+----------------+------------------------------------------+
 ; Parameter Name         ; Value          ; Type                                     ;
 +------------------------+----------------+------------------------------------------+
@@ -1318,7 +1320,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: ImageDrawer:inst1|lpm_divide:Div1 ;
+; Parameter Settings for Inferred Entity Instance: ImageDrawer:inst5|lpm_divide:Div1 ;
 +------------------------+----------------+------------------------------------------+
 ; Parameter Name         ; Value          ; Type                                     ;
 +------------------------+----------------+------------------------------------------+
@@ -1341,7 +1343,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: ImageDrawer:inst1|lpm_divide:Mod0 ;
+; Parameter Settings for Inferred Entity Instance: ImageDrawer:inst5|lpm_divide:Mod0 ;
 +------------------------+----------------+------------------------------------------+
 ; Parameter Name         ; Value          ; Type                                     ;
 +------------------------+----------------+------------------------------------------+
@@ -1364,7 +1366,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: ImageDrawer:inst1|lpm_divide:Div0 ;
+; Parameter Settings for Inferred Entity Instance: ImageDrawer:inst5|lpm_divide:Div0 ;
 +------------------------+----------------+------------------------------------------+
 ; Parameter Name         ; Value          ; Type                                     ;
 +------------------------+----------------+------------------------------------------+
@@ -1417,23 +1419,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 8                           ;
-; cycloneiii_ff         ; 92                          ;
+; cycloneiii_ff         ; 101                         ;
 ;     ENA               ; 31                          ;
-;     plain             ; 61                          ;
-; cycloneiii_lcell_comb ; 766                         ;
-;     arith             ; 208                         ;
-;         2 data inputs ; 82                          ;
+;     SCLR              ; 8                           ;
+;     plain             ; 62                          ;
+; cycloneiii_lcell_comb ; 778                         ;
+;     arith             ; 215                         ;
+;         2 data inputs ; 89                          ;
 ;         3 data inputs ; 126                         ;
-;     normal            ; 558                         ;
+;     normal            ; 563                         ;
 ;         0 data inputs ; 33                          ;
-;         1 data inputs ; 3                           ;
-;         2 data inputs ; 214                         ;
-;         3 data inputs ; 71                          ;
-;         4 data inputs ; 237                         ;
+;         1 data inputs ; 4                           ;
+;         2 data inputs ; 216                         ;
+;         3 data inputs ; 74                          ;
+;         4 data inputs ; 236                         ;
 ; cycloneiii_pll        ; 2                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 20.80                       ;
-; Average LUT depth     ; 10.77                       ;
+; Average LUT depth     ; 10.54                       ;
 +-----------------------+-----------------------------+
 
 
@@ -1442,7 +1445,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:06     ;
+; Top            ; 00:00:03     ;
 +----------------+--------------+
 
 
@@ -1452,10 +1455,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sun Nov 18 13:29:04 2018
+    Info: Processing started: Mon Nov 19 22:55:59 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off TpFinal -c main
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file pseudopll.v
+    Info (12023): Found entity 1: PseudoPll File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/PseudoPll.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file vga_controller.v
     Info (12023): Found entity 1: VGA_controller File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/VGA_controller.v Line: 5
 Info (12021): Found 1 design units, including 1 entities, in source file imagedrawer.v
@@ -1469,6 +1474,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file pll.v
 Info (12021): Found 1 design units, including 1 entities, in source file pll2.v
     Info (12023): Found entity 1: PLL2 File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/PLL2.v Line: 39
 Info (12127): Elaborating entity "main" for the top level hierarchy
+Warning (275011): Block or symbol "PseudoPll" of instance "inst1" overlaps another block or symbol
 Info (12128): Elaborating entity "VGA_controller" for hierarchy "VGA_controller:inst"
 Warning (10230): Verilog HDL assignment warning at VGA_controller.v(50): truncated value with size 32 to match size of target (16) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/VGA_controller.v Line: 50
 Warning (10230): Verilog HDL assignment warning at VGA_controller.v(56): truncated value with size 32 to match size of target (16) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/VGA_controller.v Line: 56
@@ -1537,7 +1543,7 @@ Info (12133): Instantiated megafunction "PLL:inst4|altpll:altpll_component" with
 Info (12021): Found 1 design units, including 1 entities, in source file db/pll_altpll.v
     Info (12023): Found entity 1: PLL_altpll File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/db/pll_altpll.v Line: 29
 Info (12128): Elaborating entity "PLL_altpll" for hierarchy "PLL:inst4|altpll:altpll_component|PLL_altpll:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altpll.tdf Line: 897
-Info (12128): Elaborating entity "ImageDrawer" for hierarchy "ImageDrawer:inst1"
+Info (12128): Elaborating entity "ImageDrawer" for hierarchy "ImageDrawer:inst5"
 Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(418): truncated value with size 32 to match size of target (1) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 418
 Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(419): truncated value with size 32 to match size of target (1) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 419
 Warning (10230): Verilog HDL assignment warning at ImageDrawer.v(420): truncated value with size 32 to match size of target (1) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 420
@@ -1694,6 +1700,8 @@ Warning (10230): Verilog HDL assignment warning at counter.v(44): truncated valu
 Warning (10230): Verilog HDL assignment warning at counter.v(50): truncated value with size 32 to match size of target (6) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/counter.v Line: 50
 Warning (10230): Verilog HDL assignment warning at counter.v(57): truncated value with size 32 to match size of target (6) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/counter.v Line: 57
 Warning (10230): Verilog HDL assignment warning at counter.v(63): truncated value with size 32 to match size of target (4) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/counter.v Line: 63
+Info (12128): Elaborating entity "PseudoPll" for hierarchy "PseudoPll:inst1"
+Warning (10230): Verilog HDL assignment warning at PseudoPll.v(16): truncated value with size 32 to match size of target (8) File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/PseudoPll.v Line: 16
 Info (12128): Elaborating entity "PLL2" for hierarchy "PLL2:inst2"
 Info (12128): Elaborating entity "altpll" for hierarchy "PLL2:inst2|altpll:altpll_component" File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/PLL2.v Line: 90
 Info (12130): Elaborated megafunction instantiation "PLL2:inst2|altpll:altpll_component" File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/PLL2.v Line: 90
@@ -1756,16 +1764,16 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/pll2
     Info (12023): Found entity 1: PLL2_altpll File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/db/pll2_altpll.v Line: 29
 Info (12128): Elaborating entity "PLL2_altpll" for hierarchy "PLL2:inst2|altpll:altpll_component|PLL2_altpll:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altpll.tdf Line: 897
 Info (278001): Inferred 8 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ImageDrawer:inst1|Mod3" File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 552
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ImageDrawer:inst1|Mod2" File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 551
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ImageDrawer:inst1|Div3" File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 551
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ImageDrawer:inst1|Div2" File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 550
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ImageDrawer:inst1|Mod1" File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 546
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ImageDrawer:inst1|Div1" File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 545
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ImageDrawer:inst1|Mod0" File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 541
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ImageDrawer:inst1|Div0" File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 540
-Info (12130): Elaborated megafunction instantiation "ImageDrawer:inst1|lpm_divide:Mod3" File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 552
-Info (12133): Instantiated megafunction "ImageDrawer:inst1|lpm_divide:Mod3" with the following parameter: File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 552
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ImageDrawer:inst5|Mod3" File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 552
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ImageDrawer:inst5|Mod2" File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 551
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ImageDrawer:inst5|Div3" File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 551
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ImageDrawer:inst5|Div2" File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 550
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ImageDrawer:inst5|Mod1" File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 546
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ImageDrawer:inst5|Div1" File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 545
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ImageDrawer:inst5|Mod0" File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 541
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ImageDrawer:inst5|Div0" File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 540
+Info (12130): Elaborated megafunction instantiation "ImageDrawer:inst5|lpm_divide:Mod3" File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 552
+Info (12133): Instantiated megafunction "ImageDrawer:inst5|lpm_divide:Mod3" with the following parameter: File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 552
     Info (12134): Parameter "LPM_WIDTHN" = "10"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -1780,8 +1788,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/add_
     Info (12023): Found entity 1: add_sub_7pc File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/db/add_sub_7pc.tdf Line: 22
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_8pc.tdf
     Info (12023): Found entity 1: add_sub_8pc File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/db/add_sub_8pc.tdf Line: 22
-Info (12130): Elaborated megafunction instantiation "ImageDrawer:inst1|lpm_divide:Mod2" File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 551
-Info (12133): Instantiated megafunction "ImageDrawer:inst1|lpm_divide:Mod2" with the following parameter: File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 551
+Info (12130): Elaborated megafunction instantiation "ImageDrawer:inst5|lpm_divide:Mod2" File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 551
+Info (12133): Instantiated megafunction "ImageDrawer:inst5|lpm_divide:Mod2" with the following parameter: File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 551
     Info (12134): Parameter "LPM_WIDTHN" = "10"
     Info (12134): Parameter "LPM_WIDTHD" = "7"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -1792,8 +1800,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/sign
     Info (12023): Found entity 1: sign_div_unsign_nlh File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/db/sign_div_unsign_nlh.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_27f.tdf
     Info (12023): Found entity 1: alt_u_div_27f File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/db/alt_u_div_27f.tdf Line: 26
-Info (12130): Elaborated megafunction instantiation "ImageDrawer:inst1|lpm_divide:Div3" File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 551
-Info (12133): Instantiated megafunction "ImageDrawer:inst1|lpm_divide:Div3" with the following parameter: File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 551
+Info (12130): Elaborated megafunction instantiation "ImageDrawer:inst5|lpm_divide:Div3" File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 551
+Info (12133): Instantiated megafunction "ImageDrawer:inst5|lpm_divide:Div3" with the following parameter: File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 551
     Info (12134): Parameter "LPM_WIDTHN" = "7"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -1804,16 +1812,16 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/sign
     Info (12023): Found entity 1: sign_div_unsign_akh File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/db/sign_div_unsign_akh.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_84f.tdf
     Info (12023): Found entity 1: alt_u_div_84f File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/db/alt_u_div_84f.tdf Line: 26
-Info (12130): Elaborated megafunction instantiation "ImageDrawer:inst1|lpm_divide:Div2" File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 550
-Info (12133): Instantiated megafunction "ImageDrawer:inst1|lpm_divide:Div2" with the following parameter: File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 550
+Info (12130): Elaborated megafunction instantiation "ImageDrawer:inst5|lpm_divide:Div2" File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 550
+Info (12133): Instantiated megafunction "ImageDrawer:inst5|lpm_divide:Div2" with the following parameter: File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 550
     Info (12134): Parameter "LPM_WIDTHN" = "10"
     Info (12134): Parameter "LPM_WIDTHD" = "7"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_vim.tdf
     Info (12023): Found entity 1: lpm_divide_vim File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/db/lpm_divide_vim.tdf Line: 24
-Info (12130): Elaborated megafunction instantiation "ImageDrawer:inst1|lpm_divide:Mod1" File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 546
-Info (12133): Instantiated megafunction "ImageDrawer:inst1|lpm_divide:Mod1" with the following parameter: File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 546
+Info (12130): Elaborated megafunction instantiation "ImageDrawer:inst5|lpm_divide:Mod1" File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 546
+Info (12133): Instantiated megafunction "ImageDrawer:inst5|lpm_divide:Mod1" with the following parameter: File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 546
     Info (12134): Parameter "LPM_WIDTHN" = "6"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -1824,57 +1832,57 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/sign
     Info (12023): Found entity 1: sign_div_unsign_9kh File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/db/sign_div_unsign_9kh.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_64f.tdf
     Info (12023): Found entity 1: alt_u_div_64f File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/db/alt_u_div_64f.tdf Line: 26
-Info (12130): Elaborated megafunction instantiation "ImageDrawer:inst1|lpm_divide:Div1" File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 545
-Info (12133): Instantiated megafunction "ImageDrawer:inst1|lpm_divide:Div1" with the following parameter: File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 545
+Info (12130): Elaborated megafunction instantiation "ImageDrawer:inst5|lpm_divide:Div1" File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 545
+Info (12133): Instantiated megafunction "ImageDrawer:inst5|lpm_divide:Div1" with the following parameter: File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 545
     Info (12134): Parameter "LPM_WIDTHN" = "6"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_hhm.tdf
     Info (12023): Found entity 1: lpm_divide_hhm File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/db/lpm_divide_hhm.tdf Line: 24
-Warning (13012): Latch ImageDrawer:inst1|g has unsafe behavior File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 48
+Warning (13012): Latch ImageDrawer:inst5|g has unsafe behavior File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 48
     Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_controller:inst|row[9] File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/VGA_controller.v Line: 47
-Warning (13012): Latch ImageDrawer:inst1|state[3] has unsafe behavior File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 422
+Warning (13012): Latch ImageDrawer:inst5|state[3] has unsafe behavior File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 422
     Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_controller:inst|column[0] File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/VGA_controller.v Line: 47
-Warning (13012): Latch ImageDrawer:inst1|state[2] has unsafe behavior File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 422
+Warning (13012): Latch ImageDrawer:inst5|state[2] has unsafe behavior File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 422
     Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_controller:inst|column[0] File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/VGA_controller.v Line: 47
-Warning (13012): Latch ImageDrawer:inst1|counter_col[15] has unsafe behavior File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 422
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ImageDrawer:inst1|counter_col[7] File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 422
-Warning (13012): Latch ImageDrawer:inst1|counter_col[7] has unsafe behavior File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 422
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ImageDrawer:inst1|counter_col[7] File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 422
-Warning (13012): Latch ImageDrawer:inst1|counter_col[6] has unsafe behavior File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 422
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ImageDrawer:inst1|counter_col[7] File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 422
-Warning (13012): Latch ImageDrawer:inst1|counter_col[9] has unsafe behavior File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 422
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ImageDrawer:inst1|counter_col[7] File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 422
-Warning (13012): Latch ImageDrawer:inst1|counter_col[10] has unsafe behavior File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 422
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ImageDrawer:inst1|counter_col[7] File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 422
-Warning (13012): Latch ImageDrawer:inst1|counter_col[11] has unsafe behavior File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 422
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ImageDrawer:inst1|counter_col[7] File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 422
-Warning (13012): Latch ImageDrawer:inst1|counter_col[12] has unsafe behavior File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 422
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ImageDrawer:inst1|counter_col[7] File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 422
-Warning (13012): Latch ImageDrawer:inst1|counter_col[13] has unsafe behavior File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 422
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ImageDrawer:inst1|counter_col[7] File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 422
-Warning (13012): Latch ImageDrawer:inst1|counter_col[14] has unsafe behavior File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 422
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ImageDrawer:inst1|counter_col[7] File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 422
-Warning (13012): Latch ImageDrawer:inst1|counter_col[8] has unsafe behavior File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 422
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ImageDrawer:inst1|counter_col[7] File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 422
-Warning (13012): Latch ImageDrawer:inst1|counter_col[5] has unsafe behavior File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 422
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ImageDrawer:inst1|counter_col[7] File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 422
-Warning (13012): Latch ImageDrawer:inst1|counter_col[4] has unsafe behavior File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 422
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ImageDrawer:inst1|counter_col[7] File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 422
-Warning (13012): Latch ImageDrawer:inst1|counter_col[3] has unsafe behavior File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 422
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ImageDrawer:inst1|counter_col[7] File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 422
-Warning (13012): Latch ImageDrawer:inst1|counter_col[2] has unsafe behavior File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 422
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ImageDrawer:inst1|counter_col[7] File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 422
-Warning (13012): Latch ImageDrawer:inst1|counter_col[1] has unsafe behavior File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 422
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ImageDrawer:inst1|counter_col[7] File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 422
-Warning (13012): Latch ImageDrawer:inst1|counter_col[0] has unsafe behavior File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 422
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ImageDrawer:inst1|counter_col[7] File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 422
-Warning (13012): Latch ImageDrawer:inst1|state[0] has unsafe behavior File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 422
+Warning (13012): Latch ImageDrawer:inst5|counter_col[15] has unsafe behavior File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 422
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ImageDrawer:inst5|counter_col[7] File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 422
+Warning (13012): Latch ImageDrawer:inst5|counter_col[7] has unsafe behavior File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 422
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ImageDrawer:inst5|counter_col[7] File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 422
+Warning (13012): Latch ImageDrawer:inst5|counter_col[6] has unsafe behavior File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 422
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ImageDrawer:inst5|counter_col[7] File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 422
+Warning (13012): Latch ImageDrawer:inst5|counter_col[9] has unsafe behavior File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 422
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ImageDrawer:inst5|counter_col[7] File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 422
+Warning (13012): Latch ImageDrawer:inst5|counter_col[10] has unsafe behavior File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 422
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ImageDrawer:inst5|counter_col[7] File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 422
+Warning (13012): Latch ImageDrawer:inst5|counter_col[11] has unsafe behavior File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 422
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ImageDrawer:inst5|counter_col[7] File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 422
+Warning (13012): Latch ImageDrawer:inst5|counter_col[12] has unsafe behavior File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 422
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ImageDrawer:inst5|counter_col[7] File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 422
+Warning (13012): Latch ImageDrawer:inst5|counter_col[13] has unsafe behavior File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 422
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ImageDrawer:inst5|counter_col[7] File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 422
+Warning (13012): Latch ImageDrawer:inst5|counter_col[14] has unsafe behavior File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 422
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ImageDrawer:inst5|counter_col[7] File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 422
+Warning (13012): Latch ImageDrawer:inst5|counter_col[8] has unsafe behavior File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 422
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ImageDrawer:inst5|counter_col[7] File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 422
+Warning (13012): Latch ImageDrawer:inst5|counter_col[5] has unsafe behavior File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 422
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ImageDrawer:inst5|counter_col[7] File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 422
+Warning (13012): Latch ImageDrawer:inst5|counter_col[4] has unsafe behavior File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 422
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ImageDrawer:inst5|counter_col[7] File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 422
+Warning (13012): Latch ImageDrawer:inst5|counter_col[3] has unsafe behavior File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 422
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ImageDrawer:inst5|counter_col[7] File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 422
+Warning (13012): Latch ImageDrawer:inst5|counter_col[2] has unsafe behavior File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 422
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ImageDrawer:inst5|counter_col[7] File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 422
+Warning (13012): Latch ImageDrawer:inst5|counter_col[1] has unsafe behavior File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 422
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ImageDrawer:inst5|counter_col[7] File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 422
+Warning (13012): Latch ImageDrawer:inst5|counter_col[0] has unsafe behavior File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 422
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ImageDrawer:inst5|counter_col[7] File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 422
+Warning (13012): Latch ImageDrawer:inst5|state[0] has unsafe behavior File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 422
     Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_controller:inst|column[0] File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/VGA_controller.v Line: 47
-Warning (13012): Latch ImageDrawer:inst1|counter_row[3] has unsafe behavior File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 422
+Warning (13012): Latch ImageDrawer:inst5|counter_row[3] has unsafe behavior File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 422
     Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_controller:inst|row[3] File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/VGA_controller.v Line: 47
-Warning (13012): Latch ImageDrawer:inst1|state[1] has unsafe behavior File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 422
+Warning (13012): Latch ImageDrawer:inst5|state[1] has unsafe behavior File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/ImageDrawer.v Line: 422
     Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_controller:inst|column[0] File: C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/VGA_controller.v Line: 47
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "r" is stuck at GND
@@ -1883,16 +1891,16 @@ Info (286030): Timing-Driven Synthesis is running
 Info (144001): Generated suppressed messages file C:/Users/Ezequiel PC/Documents/ITBA/Tercer año/Electronica III/tpf-team-5/Quartus/output_files/main.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 2 node(s), including 0 DDIO, 2 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 838 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 850 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 5 output pins
-    Info (21061): Implemented 828 logic cells
+    Info (21061): Implemented 840 logic cells
     Info (21065): Implemented 2 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 172 warnings
-    Info: Peak virtual memory: 4798 megabytes
-    Info: Processing ended: Sun Nov 18 13:29:36 2018
-    Info: Elapsed time: 00:00:32
-    Info: Total CPU time (on all processors): 00:00:46
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 174 warnings
+    Info: Peak virtual memory: 4792 megabytes
+    Info: Processing ended: Mon Nov 19 22:56:21 2018
+    Info: Elapsed time: 00:00:22
+    Info: Total CPU time (on all processors): 00:00:43
 
 
 +------------------------------------------+
