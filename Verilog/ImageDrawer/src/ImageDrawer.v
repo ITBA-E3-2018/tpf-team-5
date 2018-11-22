@@ -424,116 +424,118 @@ module ImageDrawer(
 		 if ( ( (row>=200)&&(row<280) )&&((column>=125)&&(column<515) ) ) begin
 			//Se esta barriendo la zona de dibujo.
 
-      //switch donde se actualiza el estado actual
-      case (column)
-        125:
-        begin
-          counter_row <= (row-200);
-          counter_col <= 0;
-          state <= hours; //pixel en el que empiezan las horas.
-        end
-          
-        (125+DIGIT_WIDTH):
-        begin
-          counter_row <= (row-200);
-          counter_col <= 0;
-          state <= DRAWING_DOTS; //pixel en el que empiezan los primeros puntos.
-        end
+			//switch donde se actualiza el estado actual
+			case (column)
+			  125:
+			  begin
+				 counter_row <= (row-200);
+				 counter_col <= 0;
+				 state <= hours; //pixel en el que empiezan las horas.
+			  end
+				 
+			  (125+DIGIT_WIDTH):
+			  begin
+				 counter_row <= (row-200);
+				 counter_col <= 0;
+				 state <= DRAWING_DOTS; //pixel en el que empiezan los primeros puntos.
+			  end
 
-        (125+DIGIT_WIDTH+(9*DIGIT_WIDTH)/20):
-        begin
-          counter_row <= (row-200);
-          counter_col <= 0;
-          state <= minutes_H; //pixel en el que empieza el primer digito de minutos.
-        end
-        
-        (125+2*DIGIT_WIDTH+((9*DIGIT_WIDTH)/20)+DIGIT_WIDTH/10) :
-        begin
-          counter_row <= (row-200);
-          counter_col <= 0;
-          state <= minutes_L; //pixel en el que empieza el segundo digito de minutos.
-        end
-        
-        (125+3*DIGIT_WIDTH+((9*DIGIT_WIDTH)/20)+DIGIT_WIDTH/10):
-        begin
-          counter_row <= (row-200);
-          counter_col <= 0;
-          state <= DRAWING_DOTS; //pixel en el que empiezan los segundos puntos.
-        end
-          
-        (125+3*DIGIT_WIDTH+((2*9*DIGIT_WIDTH)/20)+DIGIT_WIDTH/10):
-        begin
-          counter_row <= (row-200);
-          counter_col <= 0;
-          state <= seconds_H; //pixel en el que empieza el primer digito de segundos.
-        end
-          
-        (125+4*DIGIT_WIDTH+((2*9*DIGIT_WIDTH)/20)+(2*DIGIT_WIDTH)/10):
-        begin
-          counter_row <= (row-200);
-          counter_col <= 0;
-          state <= seconds_L; //pixel en el que empieza el segundo digito de segundos.
-        end
-          
-        (125+5*DIGIT_WIDTH+((2*9*DIGIT_WIDTH)/20)+(2*DIGIT_WIDTH)/10):
-        begin
-          counter_row <= (row-200);
-          counter_col <= 0;
-          state <= DRAWING_DOTS; //pixel en el que empiezan los terceros puntos.
-        end
-          
-        (125+5*DIGIT_WIDTH+((3*9*DIGIT_WIDTH)/20)+(2*DIGIT_WIDTH)/10):
-        begin
-          counter_row <= (row-200);
-          counter_col <= 0;
-          state <= milliseconds_H; //pixel en el que empieza el primer digito de milisegundos. 
-        end
-          
-        (125+6*DIGIT_WIDTH+((3*9*DIGIT_WIDTH)/20)+(3*DIGIT_WIDTH)/10):
-        begin
-          counter_row <= (row-200);
-          counter_col <= 0;
-          state <= milliseconds_M; //pixel en el que empieza el segundo digito de milisegundos.
-        end
-          
-        (125+7*DIGIT_WIDTH+((3*9*DIGIT_WIDTH)/20)+(4*DIGIT_WIDTH)/10):
-        begin
-          counter_row <= (row-200);
-          counter_col <= 0;
-          state <= milliseconds_L; //pixel en el que empieza el tercer digito de milisegundos.
+			  (125+DIGIT_WIDTH+(9*DIGIT_WIDTH)/20):
+			  begin
+				 counter_row <= (row-200);
+				 counter_col <= 0;
+				 state <= minutes_H; //pixel en el que empieza el primer digito de minutos.
+			  end
+			  
+			  (125+2*DIGIT_WIDTH+((9*DIGIT_WIDTH)/20)+DIGIT_WIDTH/10) :
+			  begin
+				 counter_row <= (row-200);
+				 counter_col <= 0;
+				 state <= minutes_L; //pixel en el que empieza el segundo digito de minutos.
+			  end
+			  
+			  (125+3*DIGIT_WIDTH+((9*DIGIT_WIDTH)/20)+DIGIT_WIDTH/10):
+			  begin
+				 counter_row <= (row-200);
+				 counter_col <= 0;
+				 state <= DRAWING_DOTS; //pixel en el que empiezan los segundos puntos.
+			  end
+				 
+			  (125+3*DIGIT_WIDTH+((2*9*DIGIT_WIDTH)/20)+DIGIT_WIDTH/10):
+			  begin
+				 counter_row <= (row-200);
+				 counter_col <= 0;
+				 state <= seconds_H; //pixel en el que empieza el primer digito de segundos.
+			  end
+				 
+			  (125+4*DIGIT_WIDTH+((2*9*DIGIT_WIDTH)/20)+(2*DIGIT_WIDTH)/10):
+			  begin
+				 counter_row <= (row-200);
+				 counter_col <= 0;
+				 state <= seconds_L; //pixel en el que empieza el segundo digito de segundos.
+			  end
+				 
+			  (125+5*DIGIT_WIDTH+((2*9*DIGIT_WIDTH)/20)+(2*DIGIT_WIDTH)/10):
+			  begin
+				 counter_row <= (row-200);
+				 counter_col <= 0;
+				 state <= DRAWING_DOTS; //pixel en el que empiezan los terceros puntos.
+			  end
+				 
+			  (125+5*DIGIT_WIDTH+((3*9*DIGIT_WIDTH)/20)+(2*DIGIT_WIDTH)/10):
+			  begin
+				 counter_row <= (row-200);
+				 counter_col <= 0;
+				 state <= milliseconds_H; //pixel en el que empieza el primer digito de milisegundos. 
+			  end
+				 
+			  (125+6*DIGIT_WIDTH+((3*9*DIGIT_WIDTH)/20)+(3*DIGIT_WIDTH)/10):
+			  begin
+				 counter_row <= (row-200);
+				 counter_col <= 0;
+				 state <= milliseconds_M; //pixel en el que empieza el segundo digito de milisegundos.
+			  end
+				 
+			  (125+7*DIGIT_WIDTH+((3*9*DIGIT_WIDTH)/20)+(4*DIGIT_WIDTH)/10):
+			  begin
+				 counter_row <= (row-200);
+				 counter_col <= 0;
+				 state <= milliseconds_L; //pixel en el que empieza el tercer digito de milisegundos.
 
-        end
-          
-        default: state <= state;
-  
-      endcase
-    
+			  end
+				 
+			  default: state <= state;
+	  
+			endcase
+		 
 
-      case (state) //Switch donde se dibuja el simbolo correspondiente.
-        DRAWING_0 : Draw0;
-        DRAWING_1 : Draw1;
-        DRAWING_2 : Draw2;
-        DRAWING_3 : Draw3;
-        DRAWING_4 : Draw4;
-        DRAWING_5 : Draw5;
-        DRAWING_6 : Draw6;
-        DRAWING_7 : Draw7;
-        DRAWING_8 : Draw8;
-        DRAWING_9 : Draw9;
-        DRAWING_DOTS : DrawDots;
-       
-        default: g <= g;
-      endcase
+			case (state) //Switch donde se dibuja el simbolo correspondiente.
+			  DRAWING_0 : Draw0;
+			  DRAWING_1 : Draw1;
+			  DRAWING_2 : Draw2;
+			  DRAWING_3 : Draw3;
+			  DRAWING_4 : Draw4;
+			  DRAWING_5 : Draw5;
+			  DRAWING_6 : Draw6;
+			  DRAWING_7 : Draw7;
+			  DRAWING_8 : Draw8;
+			  DRAWING_9 : Draw9;
+			  DRAWING_DOTS : DrawDots;
+			 
+			  default: g <= g;
+			endcase
 
-      
-      
-      //switch donde se elige que dibujar dependiendo el estado.
-		 end
+			
+			
+			//switch donde se elige que dibujar dependiendo el estado.
+			 end
 		 else
 			g<=OFF;
 
 	  end
-	end
+	  else
+		g<=OFF;
+	 end
     
     //Actualizo los digitos correspondientes a los minutos
     always @(minutes) begin
