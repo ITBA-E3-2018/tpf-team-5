@@ -17,6 +17,7 @@ module counter(
     output reg[5:0] minutes;
     output reg[5:0] seconds;
     output reg[9:0] milliseconds;
+	 reg state;
 
     input clk;
     
@@ -25,7 +26,12 @@ module counter(
       minutes=0;
       seconds=0;
       milliseconds=0;
+		state=0; //Empieza sin contar.
     end
+	 always @(posedge st_signal) begin
+		state <= ~state;
+	 end
+	 
     always @(posedge clk)
         begin
           if(reset)
@@ -38,7 +44,7 @@ module counter(
               
             end
 
-            if(st_signal)
+            if(state) begin
                 //Actualizo milisegundos
                 if(milliseconds < 999)
                     milliseconds= milliseconds+1;
@@ -64,6 +70,7 @@ module counter(
                                 end  
                             end
                     end
+				end
             
         end
 

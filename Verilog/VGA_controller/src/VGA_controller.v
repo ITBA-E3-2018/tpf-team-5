@@ -17,14 +17,14 @@ parameter H_PIXELS = 640;
 parameter H_FRONT_PORSCH = 16;
 parameter H_SYNC_PULSE = 96;
 parameter H_BACK_PORSCH = 48; 
-parameter H_POL=0;
+parameter H_POL=1;
 parameter H_PERIOD= H_PIXELS+H_FRONT_PORSCH+H_BACK_PORSCH+H_SYNC_PULSE;
 //Parametros del barrido vertical.
 parameter V_PIXELS = 480;
 parameter V_FRONT_PORSCH = 10;
 parameter V_SYNC_PULSE = 2;
 parameter V_BACK_PORSCH = 33;
-parameter V_POL=0;
+parameter V_POL=1;
 parameter V_PERIOD= V_PIXELS+V_FRONT_PORSCH+V_BACK_PORSCH+V_SYNC_PULSE;
 
 input clk;
