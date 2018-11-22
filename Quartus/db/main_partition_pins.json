@@ -16,11 +16,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "st_signal",
+					"name" : "reset",
 					"strict" : false
 				},
 				{
-					"name" : "reset",
+					"name" : "st_signal",
 					"strict" : false
 				}
 			]

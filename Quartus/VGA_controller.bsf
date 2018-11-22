@@ -87,7 +87,7 @@ refer to the applicable agreement for further details.
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
 		"H_POL"
-		"0"
+		"1"
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
@@ -117,7 +117,7 @@ refer to the applicable agreement for further details.
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
 		"V_POL"
-		"0"
+		"1"
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
