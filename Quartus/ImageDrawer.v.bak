@@ -63,22 +63,32 @@ module ImageDrawer(
       begin
           if (counter_row<= (DIGIT_HEIGHT/10) ) begin
             g <= ON; //Dibuja la arista superior del 0.
+				r <= ON;
+				b <= ON;
           end
 
           else if (counter_row>= ((9*DIGIT_HEIGHT)/10) ) begin
             g <= ON; //Dibuja la arista inferior del 0.
+				r <= ON;
+				b <= ON;
           end
 
           else if (counter_col<= (DIGIT_WIDTH/5) ) begin
             g <= ON; //Dibuja la arista izquierda del 0.
+				r <= ON;
+				b <= ON;
           end
 
           else if (counter_col>= ((4*DIGIT_WIDTH)/5)-1 ) begin
             g <= ON; //Dibuja la arista derecha del 0.
+				r <= ON;
+				b <= ON;
           end
 
           else begin
             g <= OFF;
+				r <= OFF;
+				b <= OFF;
           end
 
           //Actualizo los contadores
@@ -87,6 +97,8 @@ module ImageDrawer(
           end
           else begin
               g <= OFF;
+				  r <= OFF;
+				  b <= OFF;
           end
           
         end
@@ -98,10 +110,14 @@ module ImageDrawer(
 
         if (counter_col>= ((4*DIGIT_WIDTH)/5)-1 ) begin
           g <= ON; //Dibuja la arista derecha del 1.
+			 r <= ON;
+			 b <= ON;
         end
 
         else begin
           g <= OFF;
+			 r <= OFF;
+			 b <= OFF;
         end
         
         //Actualizo los contadores
@@ -110,6 +126,8 @@ module ImageDrawer(
         end
         else begin
             g <= OFF;
+				r <= OFF;
+				b <= OFF;
         end
         
       end
@@ -120,26 +138,38 @@ module ImageDrawer(
       begin
           if (counter_row<= (DIGIT_HEIGHT/10) ) begin
             g <= ON; //Dibuja la arista superior del 2.
+				r <= ON;
+				b <= ON;
           end
 
           else if ( ( counter_row>= (DIGIT_HEIGHT/2)-DIGIT_HEIGHT/20 )&&( counter_row< (DIGIT_HEIGHT/2)+DIGIT_HEIGHT/20 ) ) begin
-            g <= ON; //Dibuja la arista central del 2.  
+            g <= ON; //Dibuja la arista central del 2.
+				r <= ON;
+				b <= ON;		
           end
 
           else if (counter_row>= ((9*DIGIT_HEIGHT)/10) ) begin
             g <= ON; //Dibuja la arista inferior del 2.
+				r <= ON;
+				b <= ON;
           end
 
           else if ( (counter_col<= (DIGIT_WIDTH/5) )&&(counter_row>= DIGIT_HEIGHT/2) ) begin
             g <= ON; //Dibuja la arista izquierda del 2.
+				r <= ON;
+				b <= ON;
           end
 
           else if ( (counter_col>= ((4*DIGIT_WIDTH)/5)-1)&&(counter_row<= DIGIT_HEIGHT/2) ) begin
             g <= ON; //Dibuja la arista derecha del 2.
+				r <= ON;
+				b <= ON;
           end
 
           else begin
             g <= OFF;
+				r <= OFF;
+				b <= OFF;
           end
 
           //Actualizo los contadores
@@ -148,6 +178,8 @@ module ImageDrawer(
           end
           else begin
               g <= OFF;
+				  r <= OFF;
+				  b <= OFF;
           end
           
       end
@@ -158,22 +190,32 @@ module ImageDrawer(
       begin
           if (counter_row<= (DIGIT_HEIGHT/10) ) begin
             g <= ON; //Dibuja la arista superior del 3.
+				r <= ON;
+				b <= ON;
           end
 
           else if ( ( counter_row>= (DIGIT_HEIGHT/2)-DIGIT_HEIGHT/20 )&&( counter_row< (DIGIT_HEIGHT/2)+DIGIT_HEIGHT/20 ) ) begin
-            g <= ON; //Dibuja la arista central del 3.  
+            g <= ON; //Dibuja la arista central del 3.
+				r <= ON;
+				b <= ON;
           end
 
           else if (counter_row>= ((9*DIGIT_HEIGHT)/10) ) begin
             g <= ON; //Dibuja la arista inferior del 3.
+				r <= ON;
+				b <= ON;
           end
 
           else if (counter_col>= ((4*DIGIT_WIDTH)/5)-1 ) begin
             g <= ON; //Dibuja la arista derecha del 3.
+				r <= ON;
+				b <= ON;
           end
 
           else begin
             g <= OFF;
+				r <= OFF;
+				b <= OFF;
           end
 
           //Actualizo los contadores
@@ -182,6 +224,8 @@ module ImageDrawer(
           end
           else begin
               g <= OFF;
+				  r <= OFF;
+				  b <= OFF;
           end
           
       end
@@ -191,19 +235,27 @@ module ImageDrawer(
     task Draw4;
       begin
           if ( ( counter_row>= (DIGIT_HEIGHT/2)-DIGIT_HEIGHT/20 )&&( counter_row< (DIGIT_HEIGHT/2)+DIGIT_HEIGHT/20 ) ) begin
-            g <= ON; //Dibuja la arista central del 4.  
+            g <= ON; //Dibuja la arista central del 4. 
+				r <= ON;
+				b <= ON;
           end
 
           else if ( (counter_col<= (DIGIT_WIDTH/5))&&(counter_row<= DIGIT_HEIGHT/2) ) begin
             g <= ON; //Dibuja la arista izquierda del 4.
+				r <= ON;
+				b <= ON;
           end
 
           else if (counter_col>= ((4*DIGIT_WIDTH)/5)-1 ) begin
             g <= ON; //Dibuja la arista derecha del 4.
+				r <= ON;
+				b <= ON;
           end
 
           else begin
             g <= OFF;
+				r <= OFF;
+				b <= OFF;
           end
 
           //Actualizo los contadores
@@ -212,6 +264,8 @@ module ImageDrawer(
           end
           else begin
               g <= OFF;
+				  r <= OFF;
+				  b <= OFF;
           end
           
       end
@@ -222,26 +276,38 @@ module ImageDrawer(
       begin
           if (counter_row<= (DIGIT_HEIGHT/10) ) begin
             g <= ON; //Dibuja la arista superior del 5.
+				r <= ON;
+				b <= ON;
           end
 
           else if ( ( counter_row>= (DIGIT_HEIGHT/2)-DIGIT_HEIGHT/20 )&&( counter_row< (DIGIT_HEIGHT/2)+DIGIT_HEIGHT/20 ) ) begin
-            g <= ON; //Dibuja la arista central del 5.  
+            g <= ON; //Dibuja la arista central del 5.
+			   r <= ON;
+				b <= ON;	
           end
 
           else if (counter_row>= ((9*DIGIT_HEIGHT)/10) ) begin
             g <= ON; //Dibuja la arista inferior del 5.
+				r <= ON;
+				b <= ON;
           end
 
           else if ( (counter_col<= (DIGIT_WIDTH/5))&&(counter_row<= DIGIT_HEIGHT/2) ) begin
             g <= ON; //Dibuja la arista izquierda del 5.
+				r <= ON;
+				b <= ON;
           end
 
           else if ( (counter_col>= ((4*DIGIT_WIDTH)/5)-1)&&(counter_row>= DIGIT_HEIGHT/2) ) begin
             g <= ON; //Dibuja la arista derecha del 5.
+				r <= ON;
+				b <= ON;
           end
 
           else begin
             g <= OFF;
+				r <= OFF;
+				b <= OFF;
           end
 
           //Actualizo los contadores
@@ -250,6 +316,8 @@ module ImageDrawer(
           end
           else begin
               g <= OFF;
+				  r <= OFF;
+				  b <= OFF;
           end
           
       end
@@ -259,26 +327,38 @@ module ImageDrawer(
       begin
           if (counter_row<= (DIGIT_HEIGHT/10) ) begin
             g <= ON; //Dibuja la arista superior del 6.
+				r <= ON;
+				b <= ON;
           end
 
           else if ( ( counter_row>= (DIGIT_HEIGHT/2)-DIGIT_HEIGHT/20 )&&( counter_row< (DIGIT_HEIGHT/2)+DIGIT_HEIGHT/20 ) ) begin
-            g <= ON; //Dibuja la arista central del 6.  
+            g <= ON; //Dibuja la arista central del 6.
+				r <= ON;
+				b <= ON;
           end
 
           else if (counter_row>= ((9*DIGIT_HEIGHT)/10) ) begin
             g <= ON; //Dibuja la arista inferior del 6.
+				r <= ON;
+				b <= ON;
           end
 
           else if (counter_col<= (DIGIT_WIDTH/5) ) begin
             g <= ON; //Dibuja la arista izquierda del 6.
+				r <= ON;
+				b <= ON;
           end
 
           else if ( (counter_col>= ((4*DIGIT_WIDTH)/5)-1)&&(counter_row>= DIGIT_HEIGHT/2) ) begin
             g <= ON; //Dibuja la arista derecha del 6.
+				r <= ON;
+				b <= ON;
           end
 
           else begin
             g <= OFF;
+				r <= OFF;
+				b <= OFF;
           end
 
           //Actualizo los contadores
@@ -287,6 +367,8 @@ module ImageDrawer(
           end
           else begin
               g <= OFF;
+				  r <= OFF;
+				  b <= OFF;
           end
           
       end
@@ -296,14 +378,20 @@ module ImageDrawer(
       begin
           if (counter_row<= (DIGIT_HEIGHT/10) ) begin
             g <= ON; //Dibuja la arista superior del 7.
+				r <= ON;
+				b <= ON;
           end
 
           else if (counter_col>= ((4*DIGIT_WIDTH)/5)-1 ) begin
             g <= ON; //Dibuja la arista derecha del 7.
+				r <= ON;
+				b <= ON;
           end
 
           else begin
             g <= OFF;
+				r <= OFF;
+				b <= OFF;
           end
 
           //Actualizo los contadores
@@ -312,6 +400,8 @@ module ImageDrawer(
           end
           else begin
               g <= OFF;
+				  r <= OFF;
+				  b <= OFF;
           end
           
       end
@@ -322,26 +412,38 @@ module ImageDrawer(
       begin
           if (counter_row<= (DIGIT_HEIGHT/10) ) begin
             g <= ON; //Dibuja la arista superior del 8.
+				r <= ON;
+				b <= ON;
           end
 
           else if ( ( counter_row>= (DIGIT_HEIGHT/2)-DIGIT_HEIGHT/20 )&&( counter_row< (DIGIT_HEIGHT/2)+DIGIT_HEIGHT/20 ) ) begin
-            g <= ON; //Dibuja la arista central del 8.  
+            g <= ON; //Dibuja la arista central del 8.
+				r <= ON;
+				b <= ON;
           end
 
           else if (counter_row>= ((9*DIGIT_HEIGHT)/10) ) begin
             g <= ON; //Dibuja la arista inferior del 8.
+				r <= ON;
+				b <= ON;
           end
 
           else if (counter_col<= (DIGIT_WIDTH/5) ) begin
             g <= ON; //Dibuja la arista izquierda del 8.
+				r <= ON;
+				b <= ON;
           end
 
           else if (counter_col>= ((4*DIGIT_WIDTH)/5)-1 ) begin
             g <= ON; //Dibuja la arista derecha del 8.
+				r <= ON;
+				b <= ON;
           end
 
           else begin
             g <= OFF;
+				r <= OFF;
+				b <= OFF;
           end
 
           //Actualizo los contadores
@@ -350,6 +452,8 @@ module ImageDrawer(
           end
           else begin
               g <= OFF;
+				  r <= OFF;
+				  b <= OFF;
           end
           
       end
@@ -359,22 +463,32 @@ module ImageDrawer(
         begin
           if (counter_row<= (DIGIT_HEIGHT/10) ) begin
             g <= ON; //Dibuja la arista superior del 9.
+				r <= ON;
+				b <= ON;
           end
 
           else if ( ( counter_row>= (DIGIT_HEIGHT/2)-DIGIT_HEIGHT/20 )&&( counter_row< (DIGIT_HEIGHT/2)+DIGIT_HEIGHT/20 ) ) begin
-            g <= ON; //Dibuja la arista central del 9.  
+            g <= ON; //Dibuja la arista central del 9.
+				r <= ON;
+				b <= ON;
           end
 
           else if ( (counter_col<= (DIGIT_WIDTH/5))&&(counter_row<= DIGIT_HEIGHT/2) ) begin
             g <= ON; //Dibuja la arista izquierda del 9.
+				r <= ON;
+				b <= ON;
           end
 
           else if (counter_col>= ((4*DIGIT_WIDTH)/5)-1 ) begin
             g <= ON; //Dibuja la arista derecha del 9.
+				r <= ON;
+				b <= ON;
           end
 
           else begin
             g <= OFF;
+				r <= OFF;
+				b <= OFF;
           end
 
           //Actualizo los contadores
@@ -383,6 +497,8 @@ module ImageDrawer(
           end
           else begin
               g <= OFF;
+				  r <= OFF;
+				  b <= OFF;
           end
           
       end
@@ -392,14 +508,20 @@ module ImageDrawer(
         begin
           if ( (counter_row< (DIGIT_HEIGHT/4))&&( ( counter_col>=(DIGIT_WIDTH/10))&&( counter_col<((7*DIGIT_WIDTH)/20)) ) ) begin
             g <= ON; //Dibuja el punto superior.
+				r <= ON;
+				b <= ON;
           end
 
           else if ( (counter_row>= ((3*DIGIT_HEIGHT)/4))&&( ( counter_col>=(DIGIT_WIDTH/10))&&( counter_col<((7*DIGIT_WIDTH)/20)) ) ) begin
             g <= ON; //Dibuja el punto inferior.
+				r <= ON;
+				b <= ON;
           end
 
           else begin
             g <= OFF;
+				r <= OFF;
+				b <= OFF;
           end
 
           //Actualizo los contadores
@@ -408,6 +530,8 @@ module ImageDrawer(
           end
           else begin
             g <= OFF;
+				r <= OFF;
+				b <= OFF;
           end
           
       end
@@ -415,7 +539,7 @@ module ImageDrawer(
 
     //La pantalla comienza toda en negro.
     initial begin 
-		 r=OFF;
+		r=OFF;
 	   g=OFF;
 	   b=OFF;
     end
@@ -424,116 +548,124 @@ module ImageDrawer(
 		 if ( ( (row>=200)&&(row<280) )&&((column>=125)&&(column<515) ) ) begin
 			//Se esta barriendo la zona de dibujo.
 
-      //switch donde se actualiza el estado actual
-      case (column)
-        125:
-        begin
-          counter_row <= (row-200);
-          counter_col <= 0;
-          state <= hours; //pixel en el que empiezan las horas.
-        end
-          
-        (125+DIGIT_WIDTH):
-        begin
-          counter_row <= (row-200);
-          counter_col <= 0;
-          state <= DRAWING_DOTS; //pixel en el que empiezan los primeros puntos.
-        end
+			//switch donde se actualiza el estado actual
+			case (column)
+			  125:
+			  begin
+				 counter_row <= (row-200);
+				 counter_col <= 0;
+				 state <= hours; //pixel en el que empiezan las horas.
+			  end
+				 
+			  (125+DIGIT_WIDTH):
+			  begin
+				 counter_row <= (row-200);
+				 counter_col <= 0;
+				 state <= DRAWING_DOTS; //pixel en el que empiezan los primeros puntos.
+			  end
 
-        (125+DIGIT_WIDTH+(9*DIGIT_WIDTH)/20):
-        begin
-          counter_row <= (row-200);
-          counter_col <= 0;
-          state <= minutes_H; //pixel en el que empieza el primer digito de minutos.
-        end
-        
-        (125+2*DIGIT_WIDTH+((9*DIGIT_WIDTH)/20)+DIGIT_WIDTH/10) :
-        begin
-          counter_row <= (row-200);
-          counter_col <= 0;
-          state <= minutes_L; //pixel en el que empieza el segundo digito de minutos.
-        end
-        
-        (125+3*DIGIT_WIDTH+((9*DIGIT_WIDTH)/20)+DIGIT_WIDTH/10):
-        begin
-          counter_row <= (row-200);
-          counter_col <= 0;
-          state <= DRAWING_DOTS; //pixel en el que empiezan los segundos puntos.
-        end
-          
-        (125+3*DIGIT_WIDTH+((2*9*DIGIT_WIDTH)/20)+DIGIT_WIDTH/10):
-        begin
-          counter_row <= (row-200);
-          counter_col <= 0;
-          state <= seconds_H; //pixel en el que empieza el primer digito de segundos.
-        end
-          
-        (125+4*DIGIT_WIDTH+((2*9*DIGIT_WIDTH)/20)+(2*DIGIT_WIDTH)/10):
-        begin
-          counter_row <= (row-200);
-          counter_col <= 0;
-          state <= seconds_L; //pixel en el que empieza el segundo digito de segundos.
-        end
-          
-        (125+5*DIGIT_WIDTH+((2*9*DIGIT_WIDTH)/20)+(2*DIGIT_WIDTH)/10):
-        begin
-          counter_row <= (row-200);
-          counter_col <= 0;
-          state <= DRAWING_DOTS; //pixel en el que empiezan los terceros puntos.
-        end
-          
-        (125+5*DIGIT_WIDTH+((3*9*DIGIT_WIDTH)/20)+(2*DIGIT_WIDTH)/10):
-        begin
-          counter_row <= (row-200);
-          counter_col <= 0;
-          state <= milliseconds_H; //pixel en el que empieza el primer digito de milisegundos. 
-        end
-          
-        (125+6*DIGIT_WIDTH+((3*9*DIGIT_WIDTH)/20)+(3*DIGIT_WIDTH)/10):
-        begin
-          counter_row <= (row-200);
-          counter_col <= 0;
-          state <= milliseconds_M; //pixel en el que empieza el segundo digito de milisegundos.
-        end
-          
-        (125+7*DIGIT_WIDTH+((3*9*DIGIT_WIDTH)/20)+(4*DIGIT_WIDTH)/10):
-        begin
-          counter_row <= (row-200);
-          counter_col <= 0;
-          state <= milliseconds_L; //pixel en el que empieza el tercer digito de milisegundos.
+			  (125+DIGIT_WIDTH+(9*DIGIT_WIDTH)/20):
+			  begin
+				 counter_row <= (row-200);
+				 counter_col <= 0;
+				 state <= minutes_H; //pixel en el que empieza el primer digito de minutos.
+			  end
+			  
+			  (125+2*DIGIT_WIDTH+((9*DIGIT_WIDTH)/20)+DIGIT_WIDTH/10) :
+			  begin
+				 counter_row <= (row-200);
+				 counter_col <= 0;
+				 state <= minutes_L; //pixel en el que empieza el segundo digito de minutos.
+			  end
+			  
+			  (125+3*DIGIT_WIDTH+((9*DIGIT_WIDTH)/20)+DIGIT_WIDTH/10):
+			  begin
+				 counter_row <= (row-200);
+				 counter_col <= 0;
+				 state <= DRAWING_DOTS; //pixel en el que empiezan los segundos puntos.
+			  end
+				 
+			  (125+3*DIGIT_WIDTH+((2*9*DIGIT_WIDTH)/20)+DIGIT_WIDTH/10):
+			  begin
+				 counter_row <= (row-200);
+				 counter_col <= 0;
+				 state <= seconds_H; //pixel en el que empieza el primer digito de segundos.
+			  end
+				 
+			  (125+4*DIGIT_WIDTH+((2*9*DIGIT_WIDTH)/20)+(2*DIGIT_WIDTH)/10):
+			  begin
+				 counter_row <= (row-200);
+				 counter_col <= 0;
+				 state <= seconds_L; //pixel en el que empieza el segundo digito de segundos.
+			  end
+				 
+			  (125+5*DIGIT_WIDTH+((2*9*DIGIT_WIDTH)/20)+(2*DIGIT_WIDTH)/10):
+			  begin
+				 counter_row <= (row-200);
+				 counter_col <= 0;
+				 state <= DRAWING_DOTS; //pixel en el que empiezan los terceros puntos.
+			  end
+				 
+			  (125+5*DIGIT_WIDTH+((3*9*DIGIT_WIDTH)/20)+(2*DIGIT_WIDTH)/10):
+			  begin
+				 counter_row <= (row-200);
+				 counter_col <= 0;
+				 state <= milliseconds_H; //pixel en el que empieza el primer digito de milisegundos. 
+			  end
+				 
+			  (125+6*DIGIT_WIDTH+((3*9*DIGIT_WIDTH)/20)+(3*DIGIT_WIDTH)/10):
+			  begin
+				 counter_row <= (row-200);
+				 counter_col <= 0;
+				 state <= milliseconds_M; //pixel en el que empieza el segundo digito de milisegundos.
+			  end
+				 
+			  (125+7*DIGIT_WIDTH+((3*9*DIGIT_WIDTH)/20)+(4*DIGIT_WIDTH)/10):
+			  begin
+				 counter_row <= (row-200);
+				 counter_col <= 0;
+				 state <= milliseconds_L; //pixel en el que empieza el tercer digito de milisegundos.
 
-        end
-          
-        default: state <= state;
-  
-      endcase
-    
+			  end
+				 
+			  default: state <= state;
+	  
+			endcase
+		 
 
-      case (state) //Switch donde se dibuja el simbolo correspondiente.
-        DRAWING_0 : Draw0;
-        DRAWING_1 : Draw1;
-        DRAWING_2 : Draw2;
-        DRAWING_3 : Draw3;
-        DRAWING_4 : Draw4;
-        DRAWING_5 : Draw5;
-        DRAWING_6 : Draw6;
-        DRAWING_7 : Draw7;
-        DRAWING_8 : Draw8;
-        DRAWING_9 : Draw9;
-        DRAWING_DOTS : DrawDots;
-       
-        default: g <= g;
-      endcase
+			case (state) //Switch donde se dibuja el simbolo correspondiente.
+			  DRAWING_0 : Draw0;
+			  DRAWING_1 : Draw1;
+			  DRAWING_2 : Draw2;
+			  DRAWING_3 : Draw3;
+			  DRAWING_4 : Draw4;
+			  DRAWING_5 : Draw5;
+			  DRAWING_6 : Draw6;
+			  DRAWING_7 : Draw7;
+			  DRAWING_8 : Draw8;
+			  DRAWING_9 : Draw9;
+			  DRAWING_DOTS : DrawDots;
+			 
+			  default: g <= g;
+						  r <= r;
+						  b <= b;
+			endcase
 
-      
-      
-      //switch donde se elige que dibujar dependiendo el estado.
-		 end
+			
+			
+			//switch donde se elige que dibujar dependiendo el estado.
+			 end
 		 else
 			g<=OFF;
+			r <= OFF;
+		   b <= OFF;
 
 	  end
-	end
+	  else
+		g<=OFF;
+		r <= OFF;
+		b <= OFF;
+	 end
     
     //Actualizo los digitos correspondientes a los minutos
     always @(minutes) begin

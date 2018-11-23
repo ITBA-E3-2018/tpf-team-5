@@ -250,12 +250,12 @@ milliseconds[9] => Div2.IN7
 milliseconds[9] => Mod2.IN7
 milliseconds[9] => Mod3.IN4
 enable => state[3].IN1
+enable => counter_col[5].IN1
 enable => counter_col[6].IN1
 enable => counter_col[7].IN1
-enable => counter_col[8].IN1
 enable => counter_row[0].IN1
 enable => counter_row[3].IN1
-enable => g.IN1
+enable => r.IN1
 row[0] => LessThan0.IN32
 row[0] => LessThan1.IN32
 row[0] => counter_row[0].DATAIN
@@ -512,9 +512,9 @@ column[15] => Equal7.IN48
 column[15] => Equal8.IN48
 column[15] => Equal9.IN48
 column[15] => Equal10.IN48
-r <= <GND>
+r <= r$latch.DB_MAX_OUTPUT_PORT_TYPE
 g <= g$latch.DB_MAX_OUTPUT_PORT_TYPE
-b <= <GND>
+b <= b$latch.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |main|counter:inst3

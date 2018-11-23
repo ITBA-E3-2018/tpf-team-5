@@ -37,36 +37,36 @@ module counter(
           if(reset)
             begin
 
-            hours<=0; //Pongo el contador en su estado inicial
-            minutes<=0;
-            seconds<=0;
-            milliseconds<=0;
+            hours=0; //Pongo el contador en su estado inicial
+            minutes=0;
+            seconds=0;
+            milliseconds=0;
               
             end
 
             if(state) begin
                 //Actualizo milisegundos
                 if(milliseconds < 999)
-                    milliseconds<= milliseconds+1;
+                    milliseconds= milliseconds+1;
                 else
                     begin
-                    milliseconds<=0;
+                    milliseconds=0;
                     //Actualizo los segundos
                         if(seconds<59)
-                            seconds<= seconds+1;
+                            seconds= seconds+1;
                         else
                             begin
-                              seconds<=0;
+                              seconds=0;
                               //Actualizo los minutos
                               if(minutes<59)
                                 begin
-                                  minutes<= minutes+1;
+                                  minutes= minutes+1;
                                 end
                               else
                                 begin
-                                  minutes<=0;
+                                  minutes=0;
                                   //Actualizo las horas
-                                  hours <= hours+1;
+                                  hours = hours+1;
                                 end  
                             end
                     end
