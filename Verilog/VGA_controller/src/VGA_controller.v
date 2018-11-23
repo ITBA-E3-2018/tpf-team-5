@@ -47,16 +47,16 @@ end
 always @(posedge clk) begin
 //Actualizo los contadores.
   if (h_count < (H_PERIOD-1)) begin
-    h_count= h_count+1; //No termino de barrer la fila
+    h_count <= h_count+1; //No termino de barrer la fila
   end
 
   else begin //Termino de barrer una fila
-    h_count=0; 
+    h_count<=0; 
     if (v_count < (V_PERIOD-1)) begin
-        v_count = v_count+1; //No termino de barrer todas las filas.
+        v_count <= v_count+1; //No termino de barrer todas las filas.
     end
     else
-        v_count=0; //Termino de barrer todas las filas.
+        v_count<=0; //Termino de barrer todas las filas.
     
   end
 
@@ -75,9 +75,9 @@ always @(posedge clk) begin
 
   //Actualizo las coordenadas del pixel a mostrar.
   if(h_count < H_PIXELS)
-    column = h_count;
+    column <= h_count;
   if(v_count < V_PIXELS)
-    row = v_count;  
+    row <= v_count;  
 
   //Determino si esta barriendo en la zona visible del display
   if (h_count < H_PIXELS && v_count < V_PIXELS) begin
