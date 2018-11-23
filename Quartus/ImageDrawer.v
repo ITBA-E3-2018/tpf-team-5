@@ -1,6 +1,7 @@
 //Moulo que dibuja la pantalla correspondiente con los
 //datos medidios.
 module ImageDrawer(
+  clk,
   hours,
   minutes,
   seconds,
@@ -41,6 +42,7 @@ module ImageDrawer(
     input wire[5:0] seconds;
     input wire[9:0] milliseconds;
     input enable;
+	 input clk;
     input [15:0]row;
     input [15:0]column;
 	 //Outputs
@@ -543,7 +545,7 @@ module ImageDrawer(
 	   g=OFF;
 	   b=OFF;
     end
-	 always @(row or column) begin
+	 always @(posedge clk) begin
 	  if (enable) begin
 		 if ( ( (row>=200)&&(row<280) )&&((column>=125)&&(column<515) ) ) begin
 			//Se esta barriendo la zona de dibujo.

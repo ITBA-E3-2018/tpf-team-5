@@ -38,10 +38,10 @@ reg [15:0] h_count; //Contador de pixels horizontales barridos.
 reg [15:0] v_count; //Contador de pixels verticales barridos.
 
 initial begin
-  row=0;
-  column=0;
-  h_count=0;
-  v_count=0;
+  row<=0;
+  column<=0;
+  h_count<=0;
+  v_count<=0;
 end
 
 always @(posedge clk) begin

@@ -1,5 +1,5 @@
 Flow report for main
-Thu Nov 22 23:48:23 2018
+Fri Nov 23 01:50:56 2018
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,22 +40,22 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Thu Nov 22 23:48:16 2018       ;
+; Flow Status                        ; Successful - Fri Nov 23 01:50:49 2018       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; main                                        ;
 ; Top-level Entity Name              ; main                                        ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE22F17C6                                ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 727 / 22,320 ( 3 % )                        ;
-;     Total combinational functions  ; 722 / 22,320 ( 3 % )                        ;
-;     Dedicated logic registers      ; 101 / 22,320 ( < 1 % )                      ;
-; Total registers                    ; 101                                         ;
+; Total logic elements               ; 695 / 22,320 ( 3 % )                        ;
+;     Total combinational functions  ; 681 / 22,320 ( 3 % )                        ;
+;     Dedicated logic registers      ; 146 / 22,320 ( < 1 % )                      ;
+; Total registers                    ; 146                                         ;
 ; Total pins                         ; 8 / 154 ( 5 % )                             ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0 / 608,256 ( 0 % )                         ;
 ; Embedded Multiplier 9-bit elements ; 0 / 132 ( 0 % )                             ;
-; Total PLLs                         ; 2 / 4 ( 50 % )                              ;
+; Total PLLs                         ; 1 / 4 ( 25 % )                              ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/22/2018 23:47:33 ;
+; Start date & time ; 11/23/2018 01:50:11 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; main                ;
 +-------------------+---------------------+
@@ -75,15 +75,12 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 62001001619510.154294125212644         ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 62001001619510.154294861113616         ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; MISC_FILE                           ; PLL.bsf                                ; --            ; --          ; --         ;
 ; MISC_FILE                           ; PLL_bb.v                               ; --            ; --          ; --         ;
 ; MISC_FILE                           ; PLL.ppf                                ; --            ; --          ; --         ;
-; MISC_FILE                           ; PLL2.bsf                               ; --            ; --          ; --         ;
-; MISC_FILE                           ; PLL2_bb.v                              ; --            ; --          ; --         ;
-; MISC_FILE                           ; PLL2.ppf                               ; --            ; --          ; --         ;
 ; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                                   ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
@@ -99,11 +96,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:21     ; 1.0                     ; 4776 MB             ; 00:00:42                           ;
-; Fitter               ; 00:00:17     ; 1.0                     ; 5316 MB             ; 00:00:21                           ;
-; Assembler            ; 00:00:01     ; 1.0                     ; 4695 MB             ; 00:00:02                           ;
-; Timing Analyzer      ; 00:00:05     ; 1.0                     ; 4785 MB             ; 00:00:05                           ;
-; Total                ; 00:00:44     ; --                      ; --                  ; 00:01:10                           ;
+; Analysis & Synthesis ; 00:00:21     ; 1.0                     ; 4778 MB             ; 00:00:42                           ;
+; Fitter               ; 00:00:11     ; 1.0                     ; 5312 MB             ; 00:00:13                           ;
+; Assembler            ; 00:00:02     ; 1.0                     ; 4695 MB             ; 00:00:02                           ;
+; Timing Analyzer      ; 00:00:06     ; 1.0                     ; 4783 MB             ; 00:00:04                           ;
+; Total                ; 00:00:40     ; --                      ; --                  ; 00:01:01                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
