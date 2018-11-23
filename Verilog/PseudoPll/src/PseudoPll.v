@@ -6,13 +6,13 @@ module PseudoPll(
 );
 input wire clk_in;
 output reg clk_out;
-reg [7:0] counter;
+reg [15:0] counter;
 initial begin
   counter=0;
   clk_out=0;
 end
 always @(posedge clk_in) begin
-  if (counter < (25-1)) begin //Aumenta el contador con cada flanco ascendente
+  if (counter < (12588-1)) begin //Aumenta el contador con cada flanco ascendente
     counter <= counter +1;
   end
   else begin
